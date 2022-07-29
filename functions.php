@@ -1,5 +1,9 @@
 <?php
 
+define('CHAPMAN_DIR', get_template_directory() );
+define('CHAPMAN_URI', get_template_directory_uri(  ));
+
+
 /*
 |--------------------------------------------------------------------------
 | Register The Auto Loader
@@ -54,7 +58,7 @@ try {
 |
 */
 
-collect(['setup', 'filters'])
+collect(['setup', 'filters', 'carbonfields', 'customizer'])
     ->each(function ($file) {
         if (! locate_template($file = "app/{$file}.php", true, true)) {
             wp_die(
