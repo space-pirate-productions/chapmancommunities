@@ -1,3 +1,147 @@
+body {
+  font-family: $body_font;
+  @include font-size(16px);
+  font-weight: 500;
+  letter-spacing: calc((0.89 / 16) * 1em);
+  line-height: calc((24 / 16) * 1em);
+}
+
+.cc-copy {
+  &--large {
+    @include font-size(18px);
+    letter-spacing: calc((1 / 18) * 1em);
+  }
+
+  &--spaced {
+    line-height: calc((36 / 18) * 1em);
+  }
+
+  &--bold {
+    @include font-size(25px);
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &--white {
+    color: $color_white;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading_font;
+  letter-spacing: calc((3.61 / 65) * 1em);
+  color: $color_limed_spruce;
+  line-height: normal;
+}
+
 h1 {
-  @include font-size(2rem);
+  @include font-size(65px);
+}
+
+h2 {
+  @include font-size(55px);
+}
+
+h3 {
+  @include font-size(50px);
+}
+
+h4 {
+  @include font-size(30px);
+}
+
+h5 {
+  @include font-size(25px);
+}
+
+h6 {
+  @include font-size(25px);
+}
+
+.cc-heading{
+  font-family: $heading_font;
+  letter-spacing: calc((3.61 / 65) * 1em);
+  color: $color_limed_spruce;
+  line-height: normal;
+
+  &--one {
+    @include font-size(65px);
+  }
+
+  &--two {
+    @include font-size(55px);
+  }
+
+  &--three {
+    @include font-size(50px);
+  }
+
+  &--four {
+    @include font-size(30px);
+  }
+
+  &--five {
+    @include font-size(25px);
+  }
+
+  &--white {
+    color: $color_white;
+  }
+}
+
+a {
+  color: $color_jagger;
+  transition: all 200ms ease-in-out;
+
+  &:hover,
+  &:active,
+  &:focus {
+   color: $color_bay_of_many
+  }
+}
+
+.btn,
+button,
+.cc-button {
+  @include font-size(18px);
+  font-weight: 700;
+  color: $color_white;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  padding: calc((12 / 18) * 1em) calc((35 / 18) * 1em);
+  background-color: $color_jagger;
+  border-radius: 2px;
+  transition: all 200ms ease-in-out;
+  border: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+   color: $color_limed_spruce;
+   background-color: $color_gray_suit;
+  }
+
+  &--reverse {
+    color: $color_limed_spruce;
+    background-color: $color_gray_suit;
+
+    &:hover,
+    &:active,
+    &:focus {
+     color: $color_white;
+     background-color: $color_jagger;
+    }
+  }
+}
+
+.wp-block-button {
+  &__link {
+    @extend .cc-button;
+  }
 }

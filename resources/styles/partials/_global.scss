@@ -1,1 +1,16 @@
+bud-error {
+  pointer-events: none;
+}
 
+html {
+  background-color: $footer_background_color;
+}
+
+body {
+  background-color: $body_background_color;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}

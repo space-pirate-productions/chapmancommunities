@@ -1,0 +1,12 @@
+.cc-copyright {
+  @include font-size(18px);
+
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.cc-address-widget {
+  &__logo {
+    margin-bottom: 20px;
+  }
+}

@@ -26,6 +26,10 @@ add_action('enqueue_block_editor_assets', function () {
     bundle('editor')->enqueue();
 }, 100);
 
+add_action('admin_enqueue_scripts', function () {
+    bundle('admin')->enqueue();
+}, 100);
+
 /**
  * Register the initial theme setup.
  *
@@ -50,6 +54,7 @@ add_action('after_setup_theme', function () {
      * @link https://wptavern.com/gutenberg-10-5-embeds-pdfs-adds-verse-block-color-options-and-introduces-new-patterns
      */
     remove_theme_support('block-templates');
+    remove_theme_support('widgets-block-editor');
 
     /**
      * Register the navigation menus.
@@ -124,25 +129,56 @@ add_action('widgets_init', function () {
         'after_title' => '</h3>',
     ];
 
+    $footerConfig = [
+        'before_widget' => '<section class="cc-footer-widget cc-footer__widget cc-footer__widget--column widget %1$s %2$s">',
+        'after_widget' => '</section>',
+        'before_title' => '<h4 class="cc-footer-widget__heading cc-footer-widget__heading--column cc-heading cc-heading--white">',
+        'after_title' => '</h4>',
+    ];
+
     register_sidebar([
         'name' => __('Primary', 'sage'),
         'id' => 'sidebar-primary',
     ] + $config);
 
     register_sidebar([
-        'name' => __('Footer', 'sage'),
-        'id' => 'sidebar-footer',
-    ] + $config);
+        'name' => __('Footer Column One', 'sage'),
+        'id' => 'sidebar-footer-one',
+    ] + $footerConfig);
+
+    register_sidebar([
+        'name' => __('Footer Column Two', 'sage'),
+        'id' => 'sidebar-footer-two',
+    ] + $footerConfig);
+
+    register_sidebar([
+        'name' => __('Footer Column Three', 'sage'),
+        'id' => 'sidebar-footer-three',
+    ] + $footerConfig);
+
+    register_sidebar([
+        'name' => __('Footer Column Four', 'sage'),
+        'id' => 'sidebar-footer-four',
+    ] + $footerConfig);
+
+    register_sidebar([
+        'name' => __('Footer Bottom Row', 'sage'),
+        'id' => 'sidebar-footer-bottom',
+        'before_widget' => '<section class="cc-footer-widget cc-footer__widget cc-footer__widget--row widget %1$s %2$s">',
+        'after_widget' => '</section>',
+        'before_title' => '<h4 class="cc-footer-widget__heading cc-footer-widget__heading--row cc-heading cc-heading--white">',
+        'after_title' => '</h4>',
+    ]);
 });
 
 /**
  * Enqueue Font Awesome script
  */
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\add_font_awesome' );
+add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\add_font_awesome');
 add_action('admin_enqueue_scripts', __NAMESPACE__ . '\\add_font_awesome');
-function add_font_awesome() {
-    // wp_enqueue_script( 'fontawesome', '//kit.fontawesome.com/f25e50d51e.js', '', '', true );
-    wp_enqueue_style( 'fontawesome', CHAPMAN_URI . '/node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css' );
-    wp_enqueue_style( 'fontawesome-brands', CHAPMAN_URI . '/node_modules/@fortawesome/fontawesome-free/css/brands.min.css' );
-    wp_enqueue_style( 'fontawesome-solid', CHAPMAN_URI . '/node_modules/@fortawesome/fontawesome-free/css/solid.min.css' );
+function add_font_awesome()
+{
+    wp_enqueue_style('fontawesome', CHAPMAN_URI . '/node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css');
+    wp_enqueue_style('fontawesome-brands', CHAPMAN_URI . '/node_modules/@fortawesome/fontawesome-free/css/brands.min.css');
+    wp_enqueue_style('fontawesome-solid', CHAPMAN_URI . '/node_modules/@fortawesome/fontawesome-free/css/solid.min.css');
 };

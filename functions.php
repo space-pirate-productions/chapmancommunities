@@ -1,7 +1,7 @@
 <?php
 
-define('CHAPMAN_DIR', get_template_directory() );
-define('CHAPMAN_URI', get_template_directory_uri(  ));
+define('CHAPMAN_DIR', get_template_directory());
+define('CHAPMAN_URI', get_template_directory_uri());
 
 
 /*
@@ -15,7 +15,7 @@ define('CHAPMAN_URI', get_template_directory_uri(  ));
 |
 */
 
-if (! file_exists($composer = __DIR__.'/vendor/autoload.php')) {
+if (!file_exists($composer = __DIR__ . '/vendor/autoload.php')) {
     wp_die(__('Error locating autoloader. Please run <code>composer install</code>.', 'sage'));
 }
 
@@ -58,9 +58,9 @@ try {
 |
 */
 
-collect(['setup', 'filters', 'carbonfields', 'customizer'])
+collect(['setup', 'filters', 'carbonfields', 'customizer', 'shortcodes', 'helpers', 'widgets'])
     ->each(function ($file) {
-        if (! locate_template($file = "app/{$file}.php", true, true)) {
+        if (!locate_template($file = "app/{$file}.php", true, true)) {
             wp_die(
                 /* translators: %s is replaced with the relative file path */
                 sprintf(__('Error locating <code>%s</code> for inclusion.', 'sage'), $file)

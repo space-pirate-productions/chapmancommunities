@@ -1,0 +1,85 @@
+.cc-footer {
+  padding-top: max(min(calc((70 / 992) * 100vw), 70px), 15px);
+  color: $color_white;
+  background-color: $footer_background_color;
+
+  &__container {
+    max-width: 1670px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+  }
+
+  &__row {
+    &--top {
+      display: grid;
+      max-width: 1364px;
+      padding-bottom: max(min(calc((70 / 992) * 100vw), 70px), 15px);
+      margin: 0 auto;
+
+      column-gap: calc((65 / 1364) * 100%);
+      row-gap: 20px;
+
+      @media (min-width: 992px) {
+        grid-auto-flow: column;
+      }
+
+      @media (min-width:768px) and (max-width:991px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width:767px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &--bottom {
+      padding-top: max(min(calc((30 / 992) * 100vw), 30px), 10px);
+      padding-bottom: max(min(calc((30 / 992) * 100vw), 30px), 10px);
+      border-top: 1px solid $color_white;
+    }
+  }
+
+  &__column {
+    &--1 {
+      @media (max-width: 991px) {
+        order: 1;
+      }
+    }
+    &--2 {
+      @media (max-width: 991px) {
+        order: 3;
+      }
+    }
+    &--3 {
+      @media (max-width: 991px) {
+        order: 4;
+      }
+    }
+    &--4 {
+      @media (max-width: 991px) {
+        order: 2;
+      }
+    }
+  }
+
+  a:not(.btn) {
+    color: $color-white;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color_jagger;
+    }
+  }
+
+  ul.menu {
+    @include font-size(20px);
+
+    padding-left: 0;
+    margin-top: 15px;
+    line-height: calc((45 / 20) * 1em);
+    letter-spacing: calc((1.11 / 20) * 1em);
+    list-style: none;
+  }
+}
