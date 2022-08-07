@@ -4,6 +4,7 @@ body {
   font-weight: 500;
   letter-spacing: calc((0.89 / 16) * 1em);
   line-height: calc((24 / 16) * 1em);
+  color: $color_mine_shaft;
 }
 
 .cc-copy {
@@ -39,31 +40,37 @@ h6 {
   line-height: normal;
 }
 
-h1 {
+h1,
+.h1 {
   @include font-size(65px);
 }
 
-h2 {
+h2,
+.h2 {
   @include font-size(55px);
 }
 
-h3 {
+h3,
+.h3 {
   @include font-size(50px);
 }
 
-h4 {
+h4,
+.h4 {
   @include font-size(30px);
 }
 
-h5 {
+h5,
+.h5 {
   @include font-size(25px);
 }
 
-h6 {
+h6,
+.h6 {
   @include font-size(25px);
 }
 
-.cc-heading{
+.cc-heading {
   font-family: $heading_font;
   letter-spacing: calc((3.61 / 65) * 1em);
   color: $color_limed_spruce;
@@ -101,7 +108,7 @@ a {
   &:hover,
   &:active,
   &:focus {
-   color: $color_bay_of_many
+    color: $color_bay_of_many;
   }
 }
 
@@ -123,8 +130,8 @@ button,
   &:hover,
   &:active,
   &:focus {
-   color: $color_limed_spruce;
-   background-color: $color_gray_suit;
+    color: $color_limed_spruce;
+    background-color: $color_gray_suit;
   }
 
   &--reverse {
@@ -134,8 +141,8 @@ button,
     &:hover,
     &:active,
     &:focus {
-     color: $color_white;
-     background-color: $color_jagger;
+      color: $color_white;
+      background-color: $color_jagger;
     }
   }
 }

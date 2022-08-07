@@ -1,5 +1,9 @@
 import {domReady} from '@roots/sage/client';
 import 'bootstrap';
+import lozad from 'lozad';
+import iconCtaSlider from './components/sliders';
+import videoModal from './components/video-modal';
+
 
 /**
  * app.main
@@ -11,6 +15,18 @@ const main = async (err) => {
   }
 
   // application code
+  const observer = lozad('.lozad', {
+    rootMargin: '500px 0px',
+    threshold: 0.1,
+    load: function(el) {
+      el.src = el.dataset.src;
+    },
+  });
+  observer.observe();
+
+  iconCtaSlider.init();
+
+  videoModal.init();
 };
 
 /**

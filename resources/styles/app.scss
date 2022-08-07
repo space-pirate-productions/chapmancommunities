@@ -1,9 +1,19 @@
 @import "bootstrap";
+@import "partials/variables";
+// @import "@splidejs/splide/css/sea-green";
+@import "partials/splide";
 @import "/node_modules/rfs/scss";
 @import "partials/fonts";
-@import "partials/variables";
 @import "partials/typography";
 @import "partials/global";
 @import "partials/header";
 @import "partials/footer";
 @import "partials/widgets";
+
+//* === START BLOCK STYLES === *//
+@import "blocks/home-page-hero";
+@import "blocks/home-page-icon-cta";
+@import "blocks/home-page-video-text";
+@import "blocks/home-page-signup";
+@import "blocks/home-page-image-cta";
+//! === END BLOCK STYLES === !//

@@ -1,10 +1,4 @@
 @import "partials/variables";
-
-.wp-block[data-type="core/widget-area"] {
-  max-width: 100%;
-}
-
-.blocks-widgets-container .editor-styles-wrapper {
-  max-width: 100%;
-}
-
+@import "editor/editor-block-editor";
+@import "editor/editor-carbon-fields";
+@import "editor/editor-front-page";

@@ -1,0 +1,30 @@
+.block-editor .cf-complex__tabs-item--current {
+  color: $color_white !important;
+  background-color: $color_jagger;
+}
+
+.block-editor .wp-block .cf-block__fields {
+  margin-bottom: 15px;
+}
+
+.cf-block  {
+  &__fields {
+    border: 1px solid $color_alto;
+  }
+}
+
+.cf-field {
+  &__label {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.cf-complex {
+  &__group {
+    .cf-field__label {
+      font-size: 13px;
+    }
+  }
+}
+

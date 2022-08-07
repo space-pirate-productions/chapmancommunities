@@ -65,4 +65,30 @@
       color: $color_jagger;
     }
   }
+
+  .dropdown-menu {
+    border-radius: 2px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 0;
+  }
+
+  .dropdown-item {
+    font-weight: 700;
+    text-transform: capitalize;
+    color: $color_limed_spruce;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    transition: all 200ms ease-in-out;
+
+    &:hover,
+    &:focus {
+      background-color: $color_gray_suit;
+    }
+
+    &.active,
+    &:active {
+      background-color: $color_jagger;
+      color: $color_spring_wood;
+    }
+  }
 }

@@ -1846,6 +1846,11 @@
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.24.20.tgz#11a657875de6008622d53f56e063a6347c51a6dd"
   integrity sha512-kVaO5aEFZb33nPMTZBxiPEkY+slxiPtqC7QX8f9B3eGOMBvEfuMfxp9DSTTCsRJPumPKjrge4yagyssO4q6qzQ==
 
+"@splidejs/splide@^4.0.7":
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/@splidejs/splide/-/splide-4.0.7.tgz#f442b7c5fc99df472c6f989787e1fb331cf177c6"
+  integrity sha512-aJAOGJN2lwjwou3mxQofc3uhe+RXpw9in0WfysFX7AMT/mj7wSqoetfm41s7J8jU6FJ3ZWaLYgSJIpBAQ5wyqw==
+
 "@trysound/sax@0.2.0":
   version "0.2.0"
   resolved "https://registry.npmjs.org/@trysound/sax/-/sax-0.2.0.tgz"
@@ -4165,6 +4170,11 @@ lower-case@^2.0.2:
   integrity sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==
   dependencies:
     tslib "^2.0.3"
+
+lozad@^1.16.0:
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/lozad/-/lozad-1.16.0.tgz#86ce732c64c69926ccdebb81c8c90bb3735948b4"
+  integrity sha512-JBr9WjvEFeKoyim3svo/gsQPTkgG/mOHJmDctZ/+U9H3ymUuvEkqpn8bdQMFsvTMcyRJrdJkLv0bXqGm0sP72w==
 
 lru-cache@^6.0.0:
   version "6.0.0"

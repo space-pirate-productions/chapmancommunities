@@ -1,0 +1,29 @@
+@media (min-width: 768px){
+  .wp-block[aria-label="Block: Hero Image"] {
+    .cf-block {
+      &__fields {
+        display: grid;
+        grid-template-areas:
+        "a b b b b"
+        "a c c d d";
+      }
+    }
+
+    .hero-image {
+      grid-area: a;
+    }
+
+    .hero-text {
+      grid-area: b;
+    }
+
+    .button-text {
+      grid-area: c;
+    }
+
+    .button-url {
+      grid-area: d;
+    }
+  }
+}
+

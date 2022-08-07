@@ -114,6 +114,12 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/themes/advanced-topics/customizer-api/#theme-support-in-sidebars
      */
     add_theme_support('customize-selective-refresh-widgets');
+
+    /**
+     * Add custom image sizes;
+     */
+    require_once('Functions/custom-image-sizes.php');
+    Functions\cc_add_image_sizes();
 }, 20);
 
 /**
