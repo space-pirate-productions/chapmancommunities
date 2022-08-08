@@ -9,8 +9,10 @@ function add_homepage_image_cta()
 {
     Block::make(__('Image CTA'))
         ->add_fields(array(
-            Field::make('text', 'section_heading', __('Section Heading')),
-            Field::make('text', 'section_text', __('Section Text')),
+            Field::make('text', 'section_heading', __('Section Heading'))
+                ->set_width(50),
+            Field::make('text', 'section_text', __('Section Text'))
+                ->set_width(50),
             Field::make('complex', 'homepage_image_cta', __('Image CTA'))
                 ->set_max(3)
                 ->set_layout('tabbed-horizontal')
@@ -21,8 +23,10 @@ function add_homepage_image_cta()
                 ->add_fields(array(
                     Field::make('image', 'cta_image', __('Image')),
                     Field::make('text', 'cta_heading', __('Heading')),
-                    Field::make('text', 'cta_button_text', __('Button Text')),
-                    Field::make('text', 'cta_button_url', __('Button URL')),
+                    Field::make('text', 'cta_button_text', __('Button Text'))
+                        ->set_width(50),
+                    Field::make('text', 'cta_button_url', __('Button URL'))
+                        ->set_width(50),
                 ))
                 ->set_header_template('<%- cta_heading ? cta_heading : $_index + 1 %>')
         ))

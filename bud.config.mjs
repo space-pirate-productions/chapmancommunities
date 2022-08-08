@@ -12,7 +12,7 @@ export default async (app) => {
      * Application entrypoints
      */
     .entry({
-      app: ["@scripts/app", "@styles/app"],
+      app: ["@scripts/app", "@styles/app.scss"],
       editor: ["@scripts/editor", "@styles/editor"],
       admin: ["@scripts/admin", "@styles/admin"],
     })
@@ -20,7 +20,7 @@ export default async (app) => {
     /**
      * Directory contents to be included in the compilation
      */
-    .assets(["images"])
+    .assets(["images", "fonts"])
 
     /**
      * Matched files trigger a page reload when modified
@@ -40,5 +40,6 @@ export default async (app) => {
     /**
      * URI of the `public` directory
      */
-    .setPublicPath("/app/themes/sage/public/");
+    // .setPublicPath("/app/themes/sage/public/");
+    .setPublicPath("/wp-content/themes/chapmancommunities/public/");
 };

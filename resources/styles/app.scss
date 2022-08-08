@@ -1,12 +1,13 @@
 @import "bootstrap";
+@import "partials/fonts";
 @import "partials/variables";
 // @import "@splidejs/splide/css/sea-green";
 @import "partials/splide";
 @import "/node_modules/rfs/scss";
-@import "partials/fonts";
 @import "partials/typography";
 @import "partials/global";
 @import "partials/header";
+@import "partials/posts";
 @import "partials/footer";
 @import "partials/widgets";
 

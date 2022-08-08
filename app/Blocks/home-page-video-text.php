@@ -9,10 +9,18 @@ function cc_home_video_text()
 {
     Block::make(__('Video/Text Block'))
         ->add_fields(array(
-            Field::make('image', 'video_placeholder', __('Video Placeholder Image')),
-            Field::make('text', 'video_url', __('Video URL')),
-            Field::make('text', 'heading', __('Heading')),
-            Field::make('rich_text', 'text', __('Text')),
+            Field::make('image', 'video_placeholder', __('Video Placeholder Image'))
+                ->set_classes('video-placeholder')
+                ->set_width(50),
+            Field::make('text', 'video_url', __('Video URL'))
+                ->set_classes('video_url')
+                ->set_width(50),
+            Field::make('text', 'heading', __('Heading'))
+                ->set_classes('heading')
+                ->set_width(50),
+            Field::make('rich_text', 'text', __('Text'))
+                ->set_classes('text')
+                ->set_width(50),
         ))
         ->set_description(__('Renders a 50/50 block with a video on the left and text on the right.'))
         ->set_category('custom-category', __('Home Page'), 'home')

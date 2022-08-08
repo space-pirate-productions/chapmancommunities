@@ -1,11 +1,11 @@
-@media (min-width: 768px){
+@media (min-width: 768px) {
   .wp-block[aria-label="Block: Hero Image"] {
     .cf-block {
       &__fields {
         display: grid;
         grid-template-areas:
-        "a b b b b"
-        "a c c d d";
+          "a b b b b"
+          "a c c d d";
       }
     }
 
@@ -25,5 +25,31 @@
       grid-area: d;
     }
   }
-}
 
+  .wp-block[aria-label="Block: Video/Text Block"] {
+    .cf-block {
+      &__fields {
+        display: grid;
+        grid-template-areas:
+          "a a b b b"
+          "c c d d d";
+      }
+    }
+
+    .video-placeholder {
+      grid-area: a;
+    }
+
+    .video-url {
+      grid-area: c;
+    }
+
+    .heading {
+      grid-area: b;
+    }
+
+    .text {
+      grid-area: d;
+    }
+  }
+}

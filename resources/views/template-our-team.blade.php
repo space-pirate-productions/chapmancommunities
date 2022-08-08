@@ -1,8 +1,9 @@
 {{--
-  Template Name: Custom Template
+  Template Name: Our Team
+  Template Post Type: page
 --}}
 
-@extends('layouts.app')
+@extends('layouts.wide')
 
 @section('content')
   @while(have_posts()) @php(the_post())
