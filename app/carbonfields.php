@@ -10,8 +10,9 @@ function cc_load_fields()
     require_once('Blocks/home-page-hero.php');
     require_once('Blocks/home-page-icon-cta.php');
     require_once('Blocks/home-page-video-text.php');
-    require_once( 'Blocks/home-page-signup.php' );
-    require_once( 'Blocks/home-page-image-cta.php' );
+    require_once('Blocks/home-page-signup.php');
+    require_once('Blocks/home-page-image-cta.php');
+    require_once('Blocks/team-directory.php');
     require_once(CHAPMAN_DIR . '/vendor/autoload.php');
     \Carbon_Fields\Carbon_Fields::boot();
 }
