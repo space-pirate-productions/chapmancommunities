@@ -81,3 +81,14 @@ collect(['setup', 'filters', 'carbonfields', 'customizer', 'shortcodes', 'helper
 */
 
 add_theme_support('sage');
+
+/**
+ * Setup theme updater
+ */
+$ccUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+    'https://github.com/space-pirate-productions/chapmancommunities/',
+    __FILE__,
+    'chapmancommunities'
+);
+
+$ccUpdateChecker->getVcsApi()->enableReleaseAssets();
