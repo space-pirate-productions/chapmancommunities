@@ -16,19 +16,27 @@
     "translate:update": "for filename in ./resources/lang/*.po; do msgmerge -U $filename ./resources/lang/sage.pot; done; rm -f ./resources/lang/*.po~",
     "translate:compile": "yarn translate:mo && yarn translate:js",
     "translate:js": "wp i18n make-json ./resources/lang --pretty-print",
-    "translate:mo": "wp i18n make-mo ./resources/lang ./resources/lang"
+    "translate:mo": "wp i18n make-mo ./resources/lang ./resources/lang",
+    "release": "commit-and-tag-version",
+    "buildcli": "helpers/build.sh"
   },
   "devDependencies": {
     "@popperjs/core": "^2.11.5",
     "@roots/bud": "6.3.3",
     "@roots/bud-sass": "^6.3.5",
     "@roots/sage": "6.3.3",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.5",
     "@wordpress/babel-preset-default": "^6.16.0",
     "@wordpress/browserslist-config": "^4.1.2",
     "bootstrap": "^5.2.0",
     "browserslist": "^4.21.3",
+    "commit-and-tag-version": "^10.0.1",
     "eslint": "^8.21.0",
     "eslint-plugin-react": "^7.30.1",
+    "semantic-release": "^19.0.3",
     "stylelint": "^14.9.1",
     "stylelint-config-standard": "^26.0.0",
     "stylelint-config-standard-scss": "^5.0.0"
@@ -38,5 +46,59 @@
     "@splidejs/splide": "^4.0.7",
     "lozad": "^1.16.0",
     "rfs": "^9.0.6"
+  },
+  "standard-version": {
+    "skip": {
+      "tag": true,
+      "commit": true,
+      "changelog": true
+    },
+    "bumpFiles": [
+      {
+        "filename": "package.json",
+        "type": "json"
+      },
+      {
+        "filename": "style.css",
+        "updater": "helpers/theme-version-updater.js"
+      }
+    ]
+  },
+  "release": {
+    "branches": "main",
+    "repositoryUrl": "https://github.com/space-pirate-productions/chapmancommunities",
+    "tagFormat": "${version}",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      [
+        "@semantic-release/exec",
+        {
+          "prepareCmd": "yarn run release -- --release-as ${nextRelease.version} && yarn run buildcli"
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "CHANGELOG.md",
+            "style.css"
+          ]
+        }
+      ],
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            {
+              "path": "chapmancommunities.zip",
+              "label": "Chapman Communities Theme"
+            }
+          ]
+        }
+      ]
+    ]
   }
 }
