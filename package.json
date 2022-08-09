@@ -2,6 +2,7 @@
   "name": "sage",
   "private": true,
   "browserslist": [
+    "extends @wordpress/browserslist-config",
     "extends @roots/browserslist-config/current"
   ],
   "engines": {
@@ -22,7 +23,15 @@
     "@roots/bud": "6.3.3",
     "@roots/bud-sass": "^6.3.5",
     "@roots/sage": "6.3.3",
-    "bootstrap": "^5.2.0"
+    "@wordpress/babel-preset-default": "^6.16.0",
+    "@wordpress/browserslist-config": "^4.1.2",
+    "bootstrap": "^5.2.0",
+    "browserslist": "^4.21.3",
+    "eslint": "^8.21.0",
+    "eslint-plugin-react": "^7.30.1",
+    "stylelint": "^14.9.1",
+    "stylelint-config-standard": "^26.0.0",
+    "stylelint-config-standard-scss": "^5.0.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.1.2",
