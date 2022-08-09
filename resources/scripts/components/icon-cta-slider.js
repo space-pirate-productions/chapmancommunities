@@ -1,14 +1,5 @@
 import Splide from "@splidejs/splide";
-
-// const iconCtaSlider = new Splide(".cc-slider", {
-//   mediaQuery: 'min',
-//   type: 'loop',
-//   breakpoints: {
-//     768: {
-//       destroy: true
-//     }
-//   }
-// });
+import $ from "jquery";
 
 const iconCtaSlider = {
   init() {

@@ -1,7 +1,8 @@
 import {domReady} from '@roots/sage/client';
 import 'bootstrap';
 import lozad from 'lozad';
-import iconCtaSlider from './components/sliders';
+import iconCtaSlider from './components/icon-cta-slider';
+import teamsSlider from './components/team-directory-slider';
 import videoModal from './components/video-modal';
 
 
@@ -27,6 +28,8 @@ const main = async (err) => {
   iconCtaSlider.init();
 
   videoModal.init();
+
+  teamsSlider.init();
 };
 
 /**

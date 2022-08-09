@@ -37,10 +37,6 @@ function add_team_directory_block()
         ->set_icon('groups')
         ->set_keywords([__('team'), __('directory'), __('template')])
         ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
-            // $name = array_column($people, 'name');
-            // $normalName = array_map('strtolower', $name);
-            // array_multisort($normalName, SORT_ASC, $people);
-            // \print_r($people);
             $locations = $fields['locations'];
             $everyone = array();
             // Get all team members
@@ -59,52 +55,99 @@ function add_team_directory_block()
             if (!empty($locations)) : ?>
             <section class="cc-team-directory">
                 <div class="cc-team-directory__container">
-                    <div class="cc-team-directory__locations splide">
+                    <div id="cc-team-locations" class="cc-team-directory__locations splide">
                         <div class="splide__track">
                             <div class="splide__list">
                                 <div class="cc-team-directory__location splide__slide">
-                                    <strong class="cc-team-directory__location-name cc-copy--large">All Locations</strong>
+                                    <div class="cc-team-directory__location-wrap">
+                                        <strong class="cc-team-directory__location-name cc-copy--large">All Locations</strong>
+                                    </div>
                                 </div>
                                 <?php foreach ($locations as $location) : ?>
                                     <div class="cc-team-directory__location splide__slide">
-                                        <strong class="cc-team-directory__location-name cc-copy--large">
-                                            <?php echo $location['location']; ?>
-                                        </strong>
+                                        <div class="cc-team-directory__location-wrap">
+                                            <strong class="cc-team-directory__location-name cc-copy--large">
+                                                <?php echo $location['location']; ?>
+                                            </strong>
+                                        </div>
                                     </div>
                                 <?php endforeach; ?>
                             </div>
                         </div>
                     </div>
-                    <div class="cc-team-directory__teams splide">
-                        <div class="splide__track splide__list">
-                            <div class="cc-team-directory__team splide__slide">
-                                <div class="cc-team-directory__team-container">
-                                    <?php foreach ($everyone as $person) :
-                                        $image = wp_get_attachment_image($person['picture'], 'team-member-headshot', \false);
-                                        $name = \sanitize_text_field($person['name']);
-                                        $title = \sanitize_text_field($person['title']);
-                                    ?>
-                                        <div class="cc-team-directory__team-member">
-                                            <div class="cc-team-directory__headshot">
-                                                <?php if ($image) : ?>
-                                                    <?php echo $image; ?>
-                                                <?php else : ?>
-                                                    <div class="cc-team-directory__placeholder">
-                                                        <i class="fa-solid fa-user"></i>
+                    <div id="cc-team-members" class="cc-team-directory__teams splide">
+                        <div class="splide__track">
+                            <div class="splide__list">
+                                <div class="cc-team-directory__team cc-team-directory__team--all-locations splide__slide">
+                                    <div class="cc-team-directory__team-container row">
+                                        <?php foreach ($everyone as $person) :
+                                            $image = wp_get_attachment_image($person['picture'], 'team-member-headshot', \false);
+                                            $name = \sanitize_text_field($person['name']);
+                                            $title = \sanitize_text_field($person['title']);
+                                        ?>
+                                            <div class="cc-team-directory__team-member col-sm-6 col-md-4 col-lg-3 g-md-5">
+                                                <div class="cc-team-directory__team-member-wrap">
+                                                    <div class="cc-team-directory__headshot">
+                                                        <?php if ($image) : ?>
+                                                            <?php echo $image; ?>
+                                                        <?php else : ?>
+                                                            <div class="cc-team-directory__placeholder">
+                                                                <i class="fa-solid fa-user"></i>
+                                                            </div>
+                                                        <?php endif; ?>
                                                     </div>
-                                                <?php endif; ?>
+                                                    <div class="cc-team-directory__info">
+                                                        <?php if ($name) : ?>
+                                                            <h5 class="cc-team-directory__name"><?php echo $name; ?></h5>
+                                                        <?php endif; ?>
+                                                        <?php if ($title) : ?>
+                                                            <p class="cc-team-directory__title cc-copy--large"><?php echo $title; ?></p>
+                                                        <?php endif; ?>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="cc-team-directory__info">
-                                                <?php if ($name) : ?>
-                                                    <h5 class="cc-team-directory__name"><?php echo $name; ?></h5>
-                                                <?php endif; ?>
-                                                <?php if ($title) : ?>
-                                                    <p class="cc-team-directory__title cc-copy--large"><?php echo $title; ?></p>
-                                                <?php endif; ?>
-                                            </div>
-                                        </div>
-                                    <?php endforeach; ?>
+                                        <?php endforeach; ?>
+                                    </div>
                                 </div>
+                                <?php foreach ($locations as $location) :
+                                    $locationName = $location['location'];
+                                    $people = $location['people'];
+                                    $name = array_column($people, 'name');
+                                    $normalName = array_map('strtolower', $name);
+                                    array_multisort($normalName, SORT_ASC, $people);
+                                ?>
+                                    <div class="cc-team-directory__team cc-team-directory__team--<?php echo $locationName ?> splide__slide">
+                                        <div class="cc-team-directory__team-container row">
+                                            <?php foreach ($people as $person) :
+                                                $image = wp_get_attachment_image($person['picture'], 'team-member-headshot', \false);
+                                                $name = \sanitize_text_field($person['name']);
+                                                $title = \sanitize_text_field($person['title']);
+                                            ?>
+                                                <div class="cc-team-directory__team-member col-sm-6 col-md-4 col-lg-3 g-md-5">
+                                                    <div class="cc-team-directory__team-member-wrap">
+                                                        <div class="cc-team-directory__headshot">
+                                                            <?php if ($image) : ?>
+                                                                <?php echo $image; ?>
+                                                            <?php else : ?>
+                                                                <div class="cc-team-directory__placeholder">
+                                                                    <i class="fa-solid fa-user"></i>
+                                                                </div>
+                                                            <?php endif; ?>
+                                                        </div>
+                                                        <div class="cc-team-directory__info">
+                                                            <?php if ($name) : ?>
+                                                                <h5 class="cc-team-directory__name"><?php echo $name; ?></h5>
+                                                            <?php endif; ?>
+                                                            <?php if ($title) : ?>
+                                                                <p class="cc-team-directory__title cc-copy--large"><?php echo $title; ?></p>
+                                                            <?php endif; ?>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <?php endforeach; ?>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
                             </div>
                         </div>
                     </div>
