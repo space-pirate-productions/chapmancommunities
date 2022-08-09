@@ -10,12 +10,12 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: composer install
-        - uses: "shivammathur/setup-php@v2"
-          with:
-            php-version: "7.4"
-        - uses: "ramsey/composer-install@v2"
-          with:
-            composer-options: "--no-dev"
+        uses: "shivammathur/setup-php@v2"
+        with:
+          php-version: "7.4"
+        uses: "ramsey/composer-install@v2"
+        with:
+          composer-options: "--no-dev"
       - name: yarn install
         uses: borales/actions-yarn@v3.0.0
         with:
