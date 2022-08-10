@@ -1,10 +1,10 @@
 .cc-video-text {
   &__container {
-    max-width: 1460px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
     display: flex;
+    max-width: 1460px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
 
     @media (max-width: 767px) {
       flex-wrap: wrap;
@@ -12,10 +12,10 @@
   }
 
   &__video-block {
-    flex: 1 1 calc((768 / 1429) * 100%);
-    display: flex;
-    justify-content: stretch;
     align-items: stretch;
+    flex: 1 1 calc((768 / 1429) * 100%);
+    justify-content: stretch;
+    display: flex;
 
     @media (min-width: 768px) and (max-width: 991px) {
       flex-basis: calc((1 / 3) * 100%);
@@ -24,16 +24,18 @@
     @media (max-width: 767px) {
       flex-basis: 100%;
       order: 2;
+
       aspect-ratio: 16 / 9;
     }
   }
 
   &__video-link {
-    display: flex;
     position: relative;
-    text-decoration: none;
-    justify-content: stretch;
     align-items: stretch;
+    justify-content: stretch;
+    display: flex;
+    text-decoration: none;
+    cursor: pointer;
 
     &:hover,
     &:active,
@@ -44,33 +46,35 @@
     }
 
     &:after {
-      content: "\f144";
-      font: var(--fa-font-solid);
-      color: $color_alizarin_crimson;
+      @include font-size(175px);
+
       position: absolute;
       top: 50%;
       right: 50%;
-      @include font-size(175px);
-      transform: translateY(-50%) translateX(50%);
-      justify-content: center;
       align-items: center;
-      pointer-events: none;
+      justify-content: center;
+      color: $color_alizarin_crimson;
+      content: "\f144";
+      font: var(--fa-font-solid);
+      transform: translateY(-50%) translateX(50%);
       transition: 200ms all ease-in-out;
+      pointer-events: none;
     }
 
     &:before {
-      content: "";
+      @include font-size(175px);
+
       position: absolute;
       top: 50%;
       right: 50%;
-      @include font-size(175px);
-      height: 0.9em;
-      width: 0.9em;
-      transform: translateY(-50%) translateX(50%);
-      justify-content: center;
       align-items: center;
-      border-radius: 100%;
+      justify-content: center;
+      width: 0.9em;
+      height: 0.9em;
+      content: "";
       background-color: $color_spring_wood;
+      border-radius: 100%;
+      transform: translateY(-50%) translateX(50%);
       pointer-events: none;
     }
 
@@ -81,13 +85,13 @@
   }
 
   &__text-block {
-    flex: 1 1 calc((661 / 1429) * 100%);
-    display: flex;
     align-items: center;
+    flex: 1 1 calc((661 / 1429) * 100%);
     justify-content: flex-end;
-    padding-left: 15px;
+    display: flex;
     padding-top: 15px;
     padding-bottom: 15px;
+    padding-left: 15px;
 
     @media (min-width: 768px) and (max-width: 991px) {
       flex-basis: calc((2 / 3) * 100%);
@@ -99,7 +103,7 @@
   }
 
   &__text-wrap {
-    max-width: 540px;
     order: 1;
+    max-width: 540px;
   }
 }

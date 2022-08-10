@@ -12,7 +12,7 @@ function cc_home_video_text()
             Field::make('image', 'video_placeholder', __('Video Placeholder Image'))
                 ->set_classes('video-placeholder')
                 ->set_width(50),
-            Field::make('text', 'video_url', __('Video URL'))
+            Field::make('text', 'video_url', __('YouTube Video ID'))
                 ->set_classes('video_url')
                 ->set_width(50),
             Field::make('text', 'heading', __('Heading'))
@@ -32,52 +32,52 @@ function cc_home_video_text()
             $heading = sanitize_text_field($fields['heading']);
             $text = apply_filters('the_content', $fields['text']);
 ?>
-        <section class="cc-home-section cc-video-text">
-            <div class="outer-stretch">
-                <div class="inner-stretch inner-stretch--video-text">
-                    <div class="cc-video-text__container">
-                        <?php if ($image && $url) : ?>
-                            <div class="cc-video-text__video-block">
-                                <a href="" class="cc-video-text__video-link" data-bs-toggle="modal" data-tagVideo="<?php echo $url ?>" data-bs-target="#videoModal">
-                                    <?php echo $image; ?>
-                                </a>
-                            </div>
-                        <?php endif; ?>
+<section class="cc-home-section cc-video-text">
+  <div class="outer-stretch">
+    <div class="inner-stretch inner-stretch--video-text">
+      <div class="cc-video-text__container">
+        <?php if ($image && $url) : ?>
+        <div class="cc-video-text__video-block">
+          <div class="cc-video-text__video-link" data-bs-toggle="modal" data-tagVideo="<?php echo 'https://www.youtube.com/embed/' . $url ?>" data-bs-target="#videoModal">
+            <?php echo $image; ?>
+          </div>
+        </div>
+        <?php endif; ?>
 
-                        <?php if ($heading || $text) : ?>
-                            <div class="cc-video-text__text-block">
-                                <div class="cc-video-text__text-wrap">
-                                    <?php if ($heading) : ?>
-                                        <h2 class="cc-video-text__heading"><?php echo $heading; ?></h2>
-                                    <?php endif; ?>
+        <?php if ($heading || $text) : ?>
+        <div class="cc-video-text__text-block">
+          <div class="cc-video-text__text-wrap">
+            <?php if ($heading) : ?>
+            <h2 class="cc-video-text__heading"><?php echo $heading; ?></h2>
+            <?php endif; ?>
 
-                                    <?php if ($text) : ?>
-                                        <div class="cc-video-text__text cc-copy--large cc-copy--spaced">
-                                            <?php echo $text; ?>
-                                        </div>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                        <?php endif; ?>
-                    </div>
-                </div>
+            <?php if ($text) : ?>
+            <div class="cc-video-text__text cc-copy--large cc-copy--spaced">
+              <?php echo $text; ?>
             </div>
+            <?php endif; ?>
+          </div>
+        </div>
+        <?php endif; ?>
+      </div>
+    </div>
+  </div>
 
-            <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-xl modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="ratio ratio-16x9">
-                                <iframe src="" allow="autoplay;" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    <?php
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-16x9">
+            <iframe src="" allow="autoplay;" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <?php
         });
 }
 
