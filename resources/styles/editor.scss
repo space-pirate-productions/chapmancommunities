@@ -1,4 +1,9 @@
 @import "partials/variables";
+$fa-font-path: "../webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
 @import "editor/editor-block-editor";
 @import "editor/editor-carbon-fields";
 @import "editor/editor-front-page";

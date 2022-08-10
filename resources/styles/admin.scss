@@ -1,9 +1,14 @@
 @import "partials/variables";
+$fa-font-path: "../webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
 
 body.widgets-php {
   .cf-complex__inserter-menu {
     background-color: $color_white;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
     border: 1px solid #c3c4c7;
   }
 

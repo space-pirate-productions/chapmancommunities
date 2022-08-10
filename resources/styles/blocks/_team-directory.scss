@@ -24,7 +24,6 @@
 
   &__locations {
     margin-bottom: max(min(calc((88 / 1800) * 100vw), 88px), 20px);
-    max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -38,11 +37,11 @@
     border: none !important;
 
     &:not(:first-child) {
-      padding-left: max(min(calc((22.5 / 1800) * 100vw), 22.5px), 7.5px);
+      padding-left: max(min(calc((20 / 1800) * 100vw), 20px), 7.5px);
     }
 
     &:not(:last-child) {
-      padding-right: max(min(calc((22.5 / 1800) * 100vw), 22.5px), 7.5px);
+      padding-right: max(min(calc((20 / 1800) * 100vw), 20px), 7.5px);
     }
 
     &.is-active {

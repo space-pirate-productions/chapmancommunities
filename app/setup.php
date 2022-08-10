@@ -176,15 +176,3 @@ add_action('widgets_init', function () {
         'after_title' => '</h4>',
     ]);
 });
-
-/**
- * Enqueue Font Awesome script
- */
-add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\add_font_awesome');
-add_action('admin_enqueue_scripts', __NAMESPACE__ . '\\add_font_awesome');
-function add_font_awesome()
-{
-    wp_enqueue_style('fontawesome', CHAPMAN_URI . '/node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css');
-    wp_enqueue_style('fontawesome-brands', CHAPMAN_URI . '/node_modules/@fortawesome/fontawesome-free/css/brands.min.css');
-    wp_enqueue_style('fontawesome-solid', CHAPMAN_URI . '/node_modules/@fortawesome/fontawesome-free/css/solid.min.css');
-};
