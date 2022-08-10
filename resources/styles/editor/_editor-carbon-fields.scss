@@ -1,13 +1,25 @@
 .block-editor .cf-complex__tabs-item--current {
   color: $color_white !important;
   background-color: $color_jagger;
+
+  &:hover {
+    background-color: $color_jagger !important;
+  }
+}
+
+.block-editor .cf-complex__tabs-item {
+  transition: 200ms ease-in-out;
+  &:hover {
+    color: $color_white;
+    background-color: $color_limed_spruce;
+  }
 }
 
 .block-editor .wp-block .cf-block__fields {
   margin-bottom: 15px;
 }
 
-.cf-block  {
+.cf-block {
   &__fields {
     border: 1px solid $color_alto;
   }
@@ -27,4 +39,3 @@
     }
   }
 }
-

@@ -12,10 +12,10 @@
   }
 
   .splide.is-active {
-    padding-left: 15px;
-    padding-right: 15px;
     padding-top: 0;
+    padding-right: 15px;
     padding-bottom: 0;
+    padding-left: 15px;
   }
 }
 
@@ -23,17 +23,21 @@
   $self: &;
 
   &__locations {
+    justify-content: center;
+    display: flex;
+    margin-right: auto;
     margin-bottom: max(min(calc((88 / 1800) * 100vw), 88px), 20px);
     margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
+
+    &.splide.is-active .splide__arrow:disabled {
+      opacity: 0;
+    }
   }
 
   &__location {
-    display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    display: flex;
     border: none !important;
 
     &:not(:first-child) {
@@ -62,13 +66,13 @@
 
     &:after {
       position: absolute;
-      content: "";
       bottom: 0;
       left: 50%;
-      transform: translateX(-50%);
       width: 0;
-      background-color: $color_jagger;
       height: 2px;
+      content: "";
+      background-color: $color_jagger;
+      transform: translateX(-50%);
       transition: all 200ms ease-in-out;
     }
   }
@@ -80,14 +84,14 @@
 
   &__teams {
     max-width: 980px;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
   }
 
   &__team-member {
-    display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    display: flex;
   }
 
   &__headshot {
@@ -99,13 +103,14 @@
   }
 
   &__placeholder {
+    align-items: center;
+    justify-content: center;
+    display: flex;
     width: 180px;
     max-width: 100%;
-    aspect-ratio: 180/212;
-    background-color: #efefef;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 125px;
+    background-color: #efefef;
+
+    aspect-ratio: 180/212;
   }
 }
