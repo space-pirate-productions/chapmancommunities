@@ -1,8 +1,8 @@
 .cc-banner {
-  padding-right: 15px;
-  padding-left: 15px;
   padding-top: 33px;
+  padding-right: 15px;
   padding-bottom: 33px;
+  padding-left: 15px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
 
   @media (max-width: 991px) {
@@ -24,15 +24,18 @@
     }
 
     img {
+      width: 522px;
       max-width: 100%;
+
+      aspect-ratio: 522/68;
     }
   }
 
   &__nav-wrap {
     @media (min-width: 992px) {
-      width: 100%;
-      display: flex;
       justify-content: flex-end;
+      display: flex;
+      width: 100%;
     }
   }
 
@@ -68,19 +71,19 @@
   }
 
   .dropdown-menu {
-    border-radius: 2px;
     padding: 0;
+    border-radius: 2px;
     @media (min-width: 992px) {
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     }
   }
 
   .dropdown-item {
-    font-weight: 700;
-    text-transform: capitalize;
-    color: $color_limed_spruce;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    color: $color_limed_spruce;
+    font-weight: 700;
+    text-transform: capitalize;
     transition: all 200ms ease-in-out;
 
     &:hover,
@@ -90,16 +93,16 @@
 
     &.active,
     &:active {
-      background-color: $color_jagger;
       color: $color_spring_wood;
+      background-color: $color_jagger;
     }
   }
 
   // 3RD LEVEL NAV FIX
   .navbar.navbar-expand-lg .dropdown .dropdown-menu .dropdown-submenu {
+    left: 100%;
     /* dropdown sub menu positioning */
     margin: 0;
-    left: 100%;
   }
 
   .dropdown .dropdown-submenu {
@@ -127,29 +130,29 @@
     .at_depth_1 .dropdown-toggle::after,
     .at_depth_2 .dropdown-toggle::after,
     .at_depth_3 .dropdown-toggle::after {
+      left: 0;
       display: inline-block;
       margin-left: 1.5em;
-      vertical-align: 0.255em;
       content: "";
+      vertical-align: 0.255em;
       border-top: 0.3em solid;
       border-right: 0.3em solid transparent;
       border-bottom: 0;
       border-left: 0.3em solid transparent;
-      left: 0;
-      /* rotate right */
-      -ms-transform: rotate(-90deg);
       /* IE 9 */
       -webkit-transform: rotate(-90deg);
+      /* rotate right */
+          -ms-transform: rotate(-90deg);
       /* Chrome, Safari, Opera */
-      transform: rotate(-90deg);
+              transform: rotate(-90deg);
     }
   }
 
   @media (max-width: 991.98px) {
     /* Smaller devices remove shadow & border from children */
     .offcanvas .dropdown-menu {
-      border: none;
       box-shadow: none;
+      border: none;
     }
   }
 

@@ -25,7 +25,7 @@ function cc_home_page_hero()
         ->set_icon('cover-image')
         ->set_keywords([__('home'), __('home page'), __('hero'), __('image')])
         ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
-            $image = wp_get_attachment_image($fields['hero_image'], 'homepage-hero', false);
+            $image = wp_get_attachment_image($fields['hero_image'], 'homepage-hero', false, array('loading' => false));
             $heroText = $fields['hero_text'];
             $buttonText = $fields['hero_button_text'];
             $buttonUrl = $fields['hero_button_url'];
