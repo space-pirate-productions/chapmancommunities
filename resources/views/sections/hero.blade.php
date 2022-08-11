@@ -1,5 +1,5 @@
-@if (get_the_post_thumbnail($post_id, 'featured-image'))
+@if (get_the_post_thumbnail(get_the_ID(), 'featured-image'))
 <section class="cc-hero container d-flex justify-content-center">
-  {!! get_the_post_thumbnail($post_id, 'featured-image', ['class' => 'img-fluid']) !!}
+  {!! get_the_post_thumbnail(get_the_ID(), 'featured-image', ['class' => 'img-fluid']) !!}
 </section>
 @endif
