@@ -12,7 +12,14 @@ namespace App;
  * @return string
  */
 add_filter('excerpt_more', function () {
-    return sprintf(' &hellip; <a href="%s">%s</a>', get_permalink(), __('Continued', 'sage'));
+    return sprintf(' &hellip; <span class="entry-excerpt-link"><a href="%s">%s</a></span>', get_permalink(), __('Read More', 'sage'));
+});
+
+/**
+ * Reduce the_excerpt() length
+ */
+add_filter('excerpt_length', function ($length) {
+    return 30;
 });
 
 /**
@@ -28,3 +35,11 @@ add_filter('wp_get_attachment_image_attributes', function ($attr, $attachment) {
     unset($attr['src']);
     return $attr;
 }, 10, 2);
+
+add_filter( 'body_class', function(array $classes) {
+    if (is_home(  )) {
+        $classes[] = 'post-index';
+    }
+
+    return $classes;
+} );

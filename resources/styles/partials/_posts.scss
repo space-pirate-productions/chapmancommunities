@@ -8,3 +8,26 @@
     margin-bottom: max(min(calc((30 / 992) * 100vw), 30px), 20px);
   }
 }
+
+body.post-index {
+  .entry-wrap {
+    max-width: 531px;
+
+    header {
+      margin-bottom: max(min(calc((30 / 1800) * 100vw), 30px), 20px);
+    }
+  }
+
+  .entry-image {
+    margin-bottom: 10px;
+  }
+
+  .entry-title {
+    margin-bottom: 10px;
+  }
+
+  .entry-excerpt-link {
+    display: block;
+    text-align: center;
+  }
+}
