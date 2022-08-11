@@ -1,0 +1,37 @@
+.cc-half-text-image {
+  $self: &;
+
+  &--image-right {
+    #{ $self }__image {
+      @media (min-width: 768px) {
+        order: 2;
+      }
+    }
+
+    #{ $self }__text {
+      @media (min-width: 768px) {
+        order: 1;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &__container {
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+
+  &__text {
+    @media (min-width: 768px) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__text-wrap {
+    max-width: 525px;
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+  }
+}

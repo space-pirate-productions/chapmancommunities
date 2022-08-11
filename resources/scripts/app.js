@@ -1,6 +1,7 @@
 import {domReady} from '@roots/sage/client';
 import 'bootstrap';
 import lozad from 'lozad';
+// import multiLevelDropdown from './components/multi-level-dropdown';
 import iconCtaSlider from './components/icon-cta-slider';
 import teamsSlider from './components/team-directory-slider';
 import videoModal from './components/video-modal';
@@ -24,6 +25,8 @@ const main = async (err) => {
     },
   });
   observer.observe();
+
+  // multiLevelDropdown.init();
 
   iconCtaSlider.init();
 
