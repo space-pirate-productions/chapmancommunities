@@ -24,7 +24,7 @@
         'menu_class' => '',
         'fallback_cb' => '__return_false',
         'items_wrap' => '<ul id="%1$s" class="navbar-nav %2$s">%3$s</ul>',
-        'depth' => 2,
+        'depth' => 3,
         'walker' => new App\bootstrap_5_wp_nav_menu_walker(),
         ]) !!}
       </nav>

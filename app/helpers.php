@@ -32,7 +32,7 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_Menu
             }
         }
         $indent = str_repeat("\t", $depth);
-        $submenu = ($depth > 0) ? ' sub-menu' : '';
+        $submenu = ($depth > 0) ? ' sub-menu dropdown-submenu' : '';
         $output .= "\n$indent<ul class=\"dropdown-menu$submenu " . esc_attr(implode(" ", $dropdown_menu_class)) . " depth_$depth\">\n";
     }
 
@@ -51,7 +51,7 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_Menu
         $classes[] = 'nav-item';
         $classes[] = 'nav-item-' . $item->ID;
         if ($depth && $args->walker->has_children) {
-            $classes[] = 'dropdown-menu dropdown-menu-end';
+            $classes[] = 'dropdown-menu-child-item dropdown-menu-end at_depth_' . $depth;
         }
 
         $class_names =  join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args));
