@@ -1,11 +1,7 @@
 .post-template-default.single-post {
-  article.post {
+  main.main {
     padding-top: max(min(calc((50 / 1800) * 100vw), 50px), 20px);
     padding-bottom: max(min(calc((100 / 1800) * 100vw), 100px), 20px);
-  }
-
-  .cc-hero {
-    margin-bottom: 20px;
   }
 
   .post-header {
