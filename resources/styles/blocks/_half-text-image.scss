@@ -1,5 +1,7 @@
 .cc-half-text-image {
   $self: &;
+  max-width: 1175px;
+  margin: 0 auto;
 
   &--image-right {
     #{ $self }__image {
@@ -12,19 +14,65 @@
       @media (min-width: 768px) {
         order: 1;
         justify-content: flex-start;
+        padding-right: 15px;
       }
+    }
+  }
+
+  &--image-left {
+    #{ $self }__text {
+      padding-left: 15px;
     }
   }
 
   &__container {
     @media (min-width: 768px) {
       display: flex;
+      align-items: center;
     }
   }
 
+  &__image {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    @media (max-width: 767px) {
+      margin-bottom: 15px;
+    }
+
+    @media (min-width: 768px) {
+      align-self: stretch;
+      justify-self: stretch;
+      flex-basis: 25%;
+    }
+
+    @media (min-width: 992px) {
+      flex-basis: calc((556 / 1175) * 100%);
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+    }
+  }
+
+  &__image-wrap {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    width: 100%;
+  }
+
   &__text {
+    display: flex;
     @media (min-width: 768px) {
       justify-content: flex-end;
+      flex-basis: 75%;
+    }
+
+    @media (min-width: 992px) {
+      flex-basis: calc((619 / 1175) * 100%);
     }
   }
 
