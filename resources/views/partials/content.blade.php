@@ -1,4 +1,4 @@
-<article @php(post_class(array( 'col-md-6' , 'd-flex' , 'justify-content-center' , )))>
+<article @php(post_class(array( 'entry', 'd-flex', 'justify-content-center' )))>
 
   <div class="entry-wrap">
     <div class="entry-image">

@@ -10,6 +10,17 @@
 }
 
 body.post-index {
+  .cc-post-index-archive {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: max(min(calc((66 / 1800) * 100vw), 66px), 20px);
+    row-gap: max(min(calc((85 / 1800) * 100vw), 85px), 20px);
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
   .entry-wrap {
     max-width: 531px;
 
@@ -20,6 +31,11 @@ body.post-index {
 
   .entry-image {
     margin-bottom: 10px;
+    img {
+      aspect-ratio: 531/356;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 
   .entry-title {
