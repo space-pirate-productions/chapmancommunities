@@ -1,0 +1,36 @@
+.cc-learn-structure {
+  padding: max(min(calc((50 / 1800) * 100vw), 50px), 10px) 0;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__heading {
+    margin-bottom: calc((20 / 55) * 1em);
+  }
+
+  &__content {
+    margin-bottom: max(min(calc((60 / 1800) * 100vw), 60px), 20px);
+    max-width: 594px;
+  }
+
+  &__days {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  &__day {
+    margin-bottom: 1em;
+  }
+
+  &__day-number {
+    font-weight: 700;
+    @include font-size(25px);
+    letter-spacing: calc((1.39 / 25) * 1em);
+    margin-right: 1ch;
+  }
+}
