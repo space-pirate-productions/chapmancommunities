@@ -1,0 +1,105 @@
+.cc-testimonials {
+  padding: max(min(calc((50 / 1800) * 100vw), 50px), 10px) 0;
+
+  &__container {
+    max-width: 1800px;
+    margin: 0 auto;
+    position: relative;
+
+    @media (max-width: 1800px) {
+      margin: 0 -15px;
+    }
+  }
+
+  &__background-image,
+  &__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.1;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__content {
+    padding: max(min(calc((91 / 1800) * 100vw), 91px), 20px) 0;
+    max-width: calc(785px + 6em);
+    margin: 0 auto;
+  }
+
+  &__heading {
+    max-width: calc(742px + 30px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: calc((70 / 50) * 1em);
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &__slider.splide.is-active {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .splide__arrow--prev {
+      left: 0;
+    }
+
+    .splide__arrow--next {
+      right: 0;
+    }
+
+    .splide__pagination {
+      top: 100%;
+      bottom: auto;
+    }
+  }
+
+  &__list.splide__list {
+    transform: none;
+  }
+
+  &__testimonial.splide__slide {
+    display: flex;
+    align-items: center;
+
+    margin-left: -100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &.is-active {
+      opacity: 1;
+      z-index: 10;
+    }
+  }
+
+  &__testimonial-wrap {
+    width: 100%;
+  }
+
+  &__testimony {
+    margin-bottom: max(min(calc((45 / 1800) * 100vw), 45px), 20px);
+  }
+
+  &__source {
+    text-align: center;
+  }
+
+  &__name {
+    margin-bottom: calc((12 / 25) * 1em);
+  }
+}

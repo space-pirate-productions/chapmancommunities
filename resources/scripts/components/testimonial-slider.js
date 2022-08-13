@@ -10,10 +10,11 @@ const testimonialSlider = {
       let arrows = slide.length <= 1 ? false : true;
 
       new Splide(element, {
-        type: "fade",
-        rewind: true,
-        perPage: 1,
+        type: "loop",
+        // rewind: true,
+        speed: 0,
         perMove: 1,
+        perPage: 1,
         drag: false,
         arrows: arrows,
         pagination: arrows,

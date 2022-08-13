@@ -68,13 +68,13 @@ function cc_testimonial_block()
                                     <div class="cc-testimonials__testimonial splide__slide">
                                         <div class="cc-testimonials__testimonial-wrap">
                                             <div class="cc-testimonials__testimony">
-                                                <p>"<?php echo $testimony; ?>"</p>
+                                                <p class="cc-copy--large cc-copy--spaced">"<?php echo $testimony; ?>"</p>
                                             </div>
                                             <?php if ($name) : ?>
                                                 <div class="cc-testimonials__source">
                                                     <h5 class="cc-testimonials__name">- <?php echo $name; ?></h5>
                                                     <?php if ($title) : ?>
-                                                        <span class="cc-testimonials__title"><?php echo $title; ?></span>
+                                                        <span class="cc-testimonials__title cc-copy--large"><?php echo $title; ?></span>
                                                     <?php endif; ?>
                                                 </div>
                                             <?php endif; ?>
