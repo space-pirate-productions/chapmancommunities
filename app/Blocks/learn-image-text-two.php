@@ -41,7 +41,7 @@ function learn_image_text_block_2()
                             <?php if ($heading) : ?>
                                 <h2 class="cc-learn-image-text-two__heading"><?php echo $heading; ?></h2>
                             <?php endif; ?>
-                            <div class="cc-learn-image-text-two__content"><?php echo $text; ?></div>
+                            <div class="cc-learn-image-text-two__content cc-copy--large cc-copy--spaced"><?php echo $text; ?></div>
                             <?php if ($buttonText && $buttonUrl) : ?>
                                 <div class="cc-learn-image-text-two__button">
                                     <a href="<?php echo $buttonUrl; ?>" class="btn"><?php echo $buttonText; ?></a>

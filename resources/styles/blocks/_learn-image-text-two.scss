@@ -1,8 +1,8 @@
-.cc-learn-image-text {
+.cc-learn-image-text-two {
   padding: max(min(calc((50 / 1800) * 100vw), 50px), 10px) 0;
 
   &__container {
-    max-width: 1472px;
+    max-width: 1274px;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -14,14 +14,10 @@
   }
 
   &__image {
-    flex-basis: calc((768 / 1472) * 100%);
+    flex-basis: calc((388 / 1274) * 100%);
     display: flex;
     justify-content: stretch;
     align-items: stretch;
-
-    @media (min-width: 768px) and (max-width: 991px) {
-      flex-basis: 25%;
-    }
 
     @media (max-width: 767px) {
       flex-basis: 100%;
@@ -31,7 +27,6 @@
     img {
       object-fit: cover;
       object-position: center;
-      box-shadow: 0 2px 33px rgba(0, 0, 0, 0.5);
 
       @media (max-width: 767px) {
         aspect-ratio: 2/1;
@@ -40,33 +35,32 @@
   }
 
   &__text {
-    flex-basis: calc((704 / 1472) * 100%);
-    align-items: center;
-
-    @media (min-width: 768px) and (max-width: 991px) {
-      flex-basis: 75%;
-    }
+    flex-basis: calc((886 / 1274) * 100%);
 
     @media (max-width: 767px) {
       flex-basis: 100%;
     }
 
     @media (min-width: 768px) {
-      padding-left: 15px;
       display: flex;
       justify-content: flex-end;
+      align-items: center;
+      padding-left: 15px;
     }
   }
 
   &__text-wrap {
-    max-width: 600px;
+    max-width: 785px;
   }
 
   &__heading {
-    margin-bottom: calc((12 / 55) * 1em);
+    margin-bottom: calc((20 / 55) * 1em);
   }
 
-  &__button {
-    margin-top: max(min(calc((45 / 1800) * 100vw), 45px), 15px);
+  &__content {
+    strong,
+    b {
+      color: $color_california;
+    }
   }
 }
