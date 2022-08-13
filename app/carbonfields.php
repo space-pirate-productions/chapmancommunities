@@ -7,13 +7,22 @@ namespace App;
 add_action('after_setup_theme', __NAMESPACE__ . '\\cc_load_fields');
 function cc_load_fields()
 {
-    require_once('Blocks/home-page-hero.php');
-    require_once('Blocks/home-page-icon-cta.php');
-    require_once('Blocks/home-page-video-text.php');
-    require_once('Blocks/home-page-signup.php');
-    require_once('Blocks/home-page-image-cta.php');
-    require_once('Blocks/team-directory.php');
-    require_once('Blocks/half-text-image.php');
+    $blocks = array(
+        'Blocks/home-page-hero.php',
+        'Blocks/home-page-icon-cta.php',
+        'Blocks/home-page-video-text.php',
+        'Blocks/home-page-signup.php',
+        'Blocks/home-page-image-cta.php',
+        'Blocks/team-directory.php',
+        'Blocks/half-text-image.php',
+        'Blocks/learn-page-header.php',
+        'Blocks/learn-image-text.php',
+    );
+
+    foreach ($blocks as $block) {
+        require_once($block);
+    }
+
     require_once(CHAPMAN_DIR . '/vendor/autoload.php');
     \Carbon_Fields\Carbon_Fields::boot();
 }

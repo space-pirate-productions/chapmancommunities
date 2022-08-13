@@ -12,4 +12,6 @@ function cc_add_image_sizes()
     add_image_size('team-member-headshot', 180, 212, true);
     add_image_size('half-image-text', 556, 503, true);
     add_image_size('blog-index', 531, 356, true);
+    add_image_size('learn-header', 1800, 340, true);
+    add_image_size('learn-image-text', 768, 713, true);
 }
