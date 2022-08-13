@@ -48,7 +48,7 @@ function learn_education_block()
                 <?php endif; ?>
 
                 <?php if ($text) : ?>
-                    <div class="cc-learn-education__text"><?php echo $text; ?></div>
+                    <div class="cc-learn-education__text cc-copy--large cc-copy--spaced"><?php echo $text; ?></div>
                 <?php endif; ?>
 
                 <div class="cc-learn-education__topics">
@@ -66,17 +66,18 @@ function learn_education_block()
                                 </div>
                             <?php endif; ?>
                             <div class="cc-learn-education__topic-content">
-                                <?php if ($heading) : ?>
-                                    <h4 class="cc-learn-education__topic-heading"><?php echo $heading; ?></h4>
-                                <?php endif; ?>
-                                <?php if ($text) : ?>
-                                    <div class="cc-learn-education__topic-text"><?php echo $text; ?></div>
-                                <?php endif; ?>
-                                <?php if ($buttonText && $buttonUrl) : ?>
-                                    <div class="cc-learn-education__topic-button">
-                                        <a href="<?php echo $buttonUrl; ?>" class="btn"><?php echo $buttonText; ?></a>
-                                    </div>
-                                <?php endif; ?>
+                                <div class="cc-learn-education__topic-content-wrap"> <?php if ($heading) : ?>
+                                        <h4 class="cc-learn-education__topic-heading"><?php echo $heading; ?></h4>
+                                    <?php endif; ?>
+                                    <?php if ($text) : ?>
+                                        <div class="cc-learn-education__topic-text cc-copy--large cc-copy--spaced"><?php echo $text; ?></div>
+                                    <?php endif; ?>
+                                    <?php if ($buttonText && $buttonUrl) : ?>
+                                        <div class="cc-learn-education__topic-button">
+                                            <a href="<?php echo $buttonUrl; ?>" class="btn"><?php echo $buttonText; ?></a>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
                             </div>
                         </div>
                     <?php endforeach; ?>
