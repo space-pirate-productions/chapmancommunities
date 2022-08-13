@@ -1,5 +1,5 @@
-import Splide from '@splidejs/splide';
-import $ from 'jquery';
+import Splide from "@splidejs/splide";
+import $ from "jquery";
 
 const teamsSlider = {
   init() {
@@ -11,27 +11,28 @@ const teamsSlider = {
       drag: false,
       updateOnMove: true,
       snap: true,
-      focus: 'center',
+      focus: "center",
     };
     let directorySettings = {
-      type: 'fade',
+      type: "fade",
       arrows: false,
       pagination: false,
       drag: false,
     };
 
-    let navigation = new Splide('#cc-team-locations', navigationSettings);
-    let directory = new Splide('#cc-team-members', directorySettings);
+    let navSlider = $("#cc-team-locations");
+    let dirSlider = $("#cc-team-members");
 
-    navigation.sync(directory);
-    navigation.mount();
-    directory.mount();
+    let navigation = null;
+    let directory = null;
 
     function adjustSlides() {
       let totalSlideWidth = null;
-      let slideContainerWidth = $('#cc-team-locations-list').innerWidth();
-      let slides = $('#cc-team-locations.is-active').find('.cc-team-directory__location');
-      slides.each(function() {
+      let slideContainerWidth = $("#cc-team-locations-list").innerWidth();
+      let slides = $("#cc-team-locations.is-active").find(
+        ".cc-team-directory__location"
+      );
+      slides.each(function () {
         let slideWidth = $(this).outerWidth(false);
         totalSlideWidth += slideWidth;
       });
@@ -40,23 +41,31 @@ const teamsSlider = {
         if (navigation.options.arrows == false) {
           navigation.options = {
             arrows: true,
-            drag: 'free',
-          }
+            drag: "free",
+          };
         }
       } else {
         if (navigation.options.arrows == true) {
           navigation.options = {
             arrows: false,
             drag: false,
-          }
+          };
         }
       }
-      }
+    }
 
-      $(window).on('load resize', function(){
+    if (navSlider.length > 0 && dirSlider.length > 0) {
+      navigation = new Splide("#cc-team-locations", navigationSettings);
+      directory = new Splide("#cc-team-members", directorySettings);
+      navigation.sync(directory);
+      navigation.mount();
+      directory.mount();
+
+      $(window).on("load resize", function () {
         adjustSlides();
-      })
-  }
+      });
+    }
+  },
 };
 
 export default teamsSlider;

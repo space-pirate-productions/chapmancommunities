@@ -7,9 +7,9 @@ use Carbon_Fields\Field;
 
 function add_homepage_icon_cta()
 {
-    Block::make(__('Icon CTA'))
+    Block::make(__('Home Icon CTA'))
         ->add_fields(array(
-            Field::make('complex', 'homepage_icon_cta', __('Icon CTA'))
+            Field::make('complex', 'homepage_icon_cta', __('Home Icon CTA'))
                 ->set_max(3)
                 ->set_layout('tabbed-horizontal')
                 ->setup_labels(array(
@@ -30,36 +30,36 @@ function add_homepage_icon_cta()
         ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
             $iconCtas = $fields['homepage_icon_cta'];
             if (!empty($iconCtas)) : ?>
-            <section class="cc-icon-cta">
+            <section class="cc-home-icon-cta">
                 <div id="main-slider" class="outer-stretch cc-slider cc-slider--mobile splide" aria-label="icon cta">
                     <div class="inner-stretch inner-stretch--icon-cta splide__track">
-                        <div class="cc-icon-cta__container splide__list">
+                        <div class="cc-home-icon-cta__container splide__list">
                             <?php foreach ($iconCtas as $key => $iconCta) :
                                 $icon = $iconCta['cta_icon'];
                                 $heading = sanitize_text_field($iconCta['cta_heading']);
                                 $text = apply_filters('the_content', $iconCta['cta_text']);
                             ?>
-                                <div class="cc-icon-cta__cta splide__slide">
+                                <div class="cc-home-icon-cta__cta splide__slide">
                                     <?php if ($icon) : ?>
-                                        <div class="cc-icon-cta__icon splide__slide__container">
+                                        <div class="cc-home-icon-cta__icon splide__slide__container">
                                             <?php echo $icon; ?>
-                                        </div><!-- /.cc-icon-cta__icon -->
+                                        </div><!-- /.cc-home-icon-cta__icon -->
                                     <?php endif; ?>
 
                                     <?php if ($heading) : ?>
-                                        <h2 class="cc-icon-cta__heading"><?php echo __($heading); ?></h2><!-- /.cc-icon-cta__heading -->
+                                        <h2 class="cc-home-icon-cta__heading"><?php echo __($heading); ?></h2><!-- /.cc-home-icon-cta__heading -->
                                     <?php endif; ?>
 
                                     <?php if ($text) : ?>
-                                        <div class="cc-icon-cta__text cc-copy--large cc-copy--spaced"><?php echo __($text); ?></div><!-- /.cc-icon-cta__text -->
+                                        <div class="cc-home-icon-cta__text cc-copy--large cc-copy--spaced"><?php echo __($text); ?></div><!-- /.cc-home-icon-cta__text -->
                                     <?php endif; ?>
 
-                                </div><!-- /.cc-icon-cta__cta -->
+                                </div><!-- /.cc-home-icon-cta__cta -->
                             <?php endforeach; ?>
-                        </div><!-- /.cc-icon-cta__container -->
+                        </div><!-- /.cc-home-icon-cta__container -->
                     </div><!-- /.inner-stretch inner-stretch--icon-cta -->
                 </div><!-- /.outer-stretch -->
-            </section><!-- /.cc-icon-cta -->
+            </section><!-- /.cc-home-icon-cta -->
 <?php endif;
         });
 }
