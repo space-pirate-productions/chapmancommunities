@@ -15,8 +15,14 @@ function cc_load_fields()
         'Blocks/home-page-image-cta.php',
         'Blocks/team-directory.php',
         'Blocks/half-text-image.php',
+        'Blocks/testimonials.php',
+        'Blocks/icon-cta.php',
         'Blocks/learn-page-header.php',
         'Blocks/learn-image-text.php',
+        'Blocks/learn-class-structure.php',
+        'Blocks/learn-image-text-two.php',
+        'Blocks/learn-education.php',
+        'Blocks/learning-supports.php',
     );
 
     foreach ($blocks as $block) {
