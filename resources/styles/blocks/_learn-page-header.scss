@@ -1,0 +1,52 @@
+.cc-learn-header {
+  padding-bottom: max(min(calc((50 / 1800) * 100vw), 50px), 10px);
+
+  &__container {
+    max-width: 1800px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+
+  &__background {
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($color_limed_spruce, 0.86);
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 767px) {
+      position: static;
+      height: auto;
+      background-color: $color_limed_spruce;
+    }
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__heading {
+    color: $color_white;
+    text-shadow: 0 2px 19px rgba(0, 0, 0, 0.83);
+    margin-top: calc((30 / 65) * 1em);
+  }
+
+  &__sub-heading {
+    color: $color_white;
+    font-weight: 700;
+    @include font-size(29px);
+    letter-spacing: calc((1.61 / 29) * 1em);
+  }
+}
