@@ -3,19 +3,19 @@ import $ from "jquery";
 
 const iconCtaSlider = {
   init() {
-    var elms = document.getElementsByClassName("cc-slider--mobile");
+    let iconSliders = $(".cc-icon-cta__slider--mobile");
 
-    for (var i = 0; i < elms.length; i++) {
-      new Splide(elms[i], {
-        mediaQuery: 'min',
-        type: 'loop',
+    $.each(iconSliders, function (index, element) {
+      new Splide(element, {
+        mediaQuery: "min",
+        type: "loop",
         breakpoints: {
           768: {
-            destroy: 'true'
-          }
-        }
+            destroy: "true",
+          },
+        },
       }).mount();
-    }
+    });
   },
 };
 
