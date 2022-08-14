@@ -35,6 +35,8 @@
     padding: max(min(calc((91 / 1800) * 100vw), 91px), 20px) 0;
     max-width: calc(785px + 6em);
     margin: 0 auto;
+    position: relative;
+    z-index: 10;
   }
 
   &__heading {

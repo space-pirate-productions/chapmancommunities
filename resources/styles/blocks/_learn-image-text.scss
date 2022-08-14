@@ -56,6 +56,11 @@
       display: flex;
       justify-content: flex-end;
     }
+
+    .purple-text {
+      color: $color_jagger;
+      font-weight: 700;
+    }
   }
 
   &__text-wrap {
