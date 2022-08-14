@@ -1,0 +1,88 @@
+.cc-locations {
+  padding: max(min(calc((50 / 1800) * 100vw), 50px), 10px) 0;
+
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+
+  &__class {
+  }
+
+  &__class-button {
+  }
+
+  &__class-image {
+    width: 100%;
+    aspect-ratio: 409/236;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    margin-bottom: 17px;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__class-info {
+    text-align: center;
+  }
+
+  &__class-list {
+  }
+
+  &__class-list-heading {
+    text-align: center;
+  }
+
+  &__class-list-list {
+    margin-top: max(min(calc((60 / 1800) * 100vw), 60px), 30px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: max(min(calc((45 / 1200) * 100vw), 45px), 15px);
+    row-gap: max(min(calc((95 / 1200) * 100vw), 95px), 20px);
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__class-list-sub-text {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  &__class-name {
+    margin-bottom: 7px;
+  }
+
+  &__class-wrap {
+  }
+
+  &__container {
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+}
+.cc-locations-map {
+  padding: max(min(calc((50 / 1800) * 100vw), 50px), 10px) 0;
+
+  &:first-of-type {
+    padding-top: 0;
+  }
+
+  &__map {
+    width: 100%;
+    height: 600px;
+
+    @media (max-width: 767px) {
+      height: 60vh;
+    }
+  }
+}

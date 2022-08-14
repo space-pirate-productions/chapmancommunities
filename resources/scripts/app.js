@@ -7,6 +7,7 @@ import teamsSlider from './components/team-directory-slider';
 import videoModal from './components/video-modal';
 import iconCtaSlider from './components/icon-cta-slider';
 import testimonialSlider from './components/testimonial-slider';
+import locationMap from './components/location-page-map';
 
 
 /**
@@ -39,6 +40,8 @@ const main = async (err) => {
   iconCtaSlider.init();
 
   testimonialSlider.init();
+
+  locationMap.init();
 };
 
 /**

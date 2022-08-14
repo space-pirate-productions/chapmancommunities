@@ -9,6 +9,7 @@ $fa-font-path: "../webfonts";
 // @import "@splidejs/splide/css/sea-green";
 @import "partials/splide";
 @import "/node_modules/rfs/scss";
+@import "leaflet/dist/leaflet.css";
 @import "partials/typography";
 @import "partials/global";
 @import "partials/header";

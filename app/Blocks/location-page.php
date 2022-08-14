@@ -32,6 +32,22 @@ function add_location_page()
                     'singular_name' => 'Location'
                 ))
                 ->set_header_template('<%- location_name ? location_name : $_index + 1 %>'),
+            Field::make('complex', 'location_markers', __('Map Markers'))
+                ->add_fields(array(
+                    Field::make('text', 'marker_name', __('Marker Name/Popup')),
+                    Field::make('text', 'marker_lat', __('Latitude'))
+                        ->set_attribute('type', 'number')
+                        ->set_width(50),
+                    Field::make('text', 'marker_long', __('Longitude'))
+                        ->set_attribute('type', 'number')
+                        ->set_width(50),
+                ))
+                ->set_layout('tabbed-vertical')
+                ->setup_labels(array(
+                    'plural_name' => 'Map Markers',
+                    'singular_name' => 'Map Marker'
+                ))
+                ->set_header_template('<%- marker_name ? marker_name : $_index + 1 %>'),
         ))
         ->set_icon('location-alt')
         ->set_category('layout')
@@ -41,8 +57,23 @@ function add_location_page()
             $heading = \sanitize_text_field($fields['location_heading']);
             $subtext = \apply_filters('the_content', $fields['location_subtext']);
             $locations = $fields['location_locations'];
+            $mapMarkers = $fields['location_markers'];
+            $mapMarkerData = array();
+            if ($mapMarkers) {
+                foreach ($mapMarkers as $mapMarker) {
+                    $addMarker = array(
+                        "name" => $mapMarker['marker_name'],
+                        "lat" => $mapMarker['marker_lat'],
+                        "long" => $mapMarker['marker_long']
+                    );
+                    array_push($mapMarkerData, $addMarker);
+                }
+            }
+            $mapMarkerJson = json_encode($mapMarkerData);
 ?>
-        <div id="map" style="height: 180px;"></div>
+        <section class="cc-locations-map">
+            <div class="cc-locations-map__map" id="cc-locations-map" data-locations='<?php echo $mapMarkerJson; ?>'></div>
+        </section>
         <section class="cc-locations">
             <div class="cc-locations__container">
                 <div class="cc-locations__class-list">
