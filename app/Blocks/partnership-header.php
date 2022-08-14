@@ -67,7 +67,7 @@ function add_partnership_header()
                                         $details = \apply_filters('the_content', $option['partner_options_details']);
                                     ?>
                                         <div class="cc-partner-header__option cc-partner-option cc-copy--large cc-copy--spaced">
-                                            <strong class="h5 cc-partner-option__name"><?php echo $name; ?></strong><?php echo '<span class="cc-partner-option__divider">-</span>' . $details; ?>
+                                            <strong class="cc-partner-option__name"><?php echo $name; ?></strong><?php echo '<span class="cc-partner-option__divider">-</span>' . $details; ?>
                                         </div>
                                     <?php endforeach; ?>
                                 </div>

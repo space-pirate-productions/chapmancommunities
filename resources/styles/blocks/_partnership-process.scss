@@ -1,0 +1,48 @@
+.cc-partner-process {
+  padding: max(min(calc((50 / 1800) * 100vw), 50px), 10px) 0;
+
+  &__container {
+    max-width: 836px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__heading {
+    margin-bottom: calc((45 / 55) * 1em);
+    max-width: 483px;
+    text-align: center;
+
+    @media (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__opening {
+    margin-bottom: 30px;
+    @media (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__step {
+    &:not(:last-child) {
+      margin-bottom: max(min(calc((60 / 1800) * 100vw), 60px), 20px);
+    }
+  }
+
+  &__step-heading {
+    @include font-size(25px);
+    font-weight: 700;
+    letter-spacing: calc((1.39 / 25) * 1em);
+    display: block;
+    margin-bottom: calc((15 / 25) * 1em);
+  }
+
+  &__steps {
+    padding-left: calc((70 / 836) * 100%);
+    padding-right: calc((70 / 836) * 100%);
+  }
+}

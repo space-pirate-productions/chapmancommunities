@@ -1,4 +1,6 @@
 .cc-partner-header {
+  padding-bottom: max(min(calc((50 / 1800) * 100vw), 50px), 10px);
+
   &__background {
     @media (min-width: 992px) {
       position: absolute;
@@ -42,7 +44,6 @@
 
   &__content {
     width: 100%;
-    box-shadow: 0 3px 13px rgba(0, 0, 0, 0.41);
     background-color: $color_white;
     padding: max(min(calc((40 / 1800) * 100vw), 40px), 20px)
       max(min(calc((67 / 1800) * 100vw), 67px), 20px);
@@ -56,9 +57,10 @@
     @media (min-width: 992px) {
       max-width: 730px;
     }
-  }
 
-  &__content-wrap {
+    @media (min-width: 768px) {
+      box-shadow: 0 3px 13px rgba(0, 0, 0, 0.41);
+    }
   }
 
   &__heading {
@@ -106,6 +108,9 @@
 .cc-partner-option {
   &__name {
     line-height: normal;
+    @include font-size(25px);
+    font-weight: 700;
+    letter-spacing: calc((1.39 / 25) * 1em);
   }
 
   &__divider {
