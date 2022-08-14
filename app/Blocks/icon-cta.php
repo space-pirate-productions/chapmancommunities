@@ -55,18 +55,18 @@ function cc_icon_cta()
                                 <?php endif; ?>
 
                                 <?php if ($heading) : ?>
-                                    <h2 class="cc-icon-cta__heading"><?php echo __($heading); ?></h2>
-                                <?php endif; ?>
+                                    <h3 class="cc-icon-cta__heading"><?php echo __($heading); ?></h2>
+                                    <?php endif; ?>
 
-                                <?php if ($text) : ?>
-                                    <div class="cc-icon-cta__text cc-copy--large cc-copy--spaced"><?php echo __($text); ?></div>
-                                <?php endif; ?>
+                                    <?php if ($text) : ?>
+                                        <div class="cc-icon-cta__text cc-copy--large cc-copy--spaced"><?php echo __($text); ?></div>
+                                    <?php endif; ?>
 
-                                <?php if ($buttonText && $buttonUrl) : ?>
-                                    <div class="cc-icon-cta__button">
-                                        <a href="<?php echo $buttonUrl; ?>" class="btn"><?php echo $buttonText; ?></a>
-                                    </div>
-                                <?php endif; ?>
+                                    <?php if ($buttonText && $buttonUrl) : ?>
+                                        <div class="cc-icon-cta__button">
+                                            <a href="<?php echo $buttonUrl; ?>" class="btn"><?php echo $buttonText; ?></a>
+                                        </div>
+                                    <?php endif; ?>
                             </div>
                         <?php endforeach; ?>
                     </div>
