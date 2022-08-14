@@ -26,6 +26,7 @@ function cc_load_fields()
         'Blocks/partnership-header.php',
         'Blocks/partnership-process.php',
         'Blocks/partnership-image-text.php',
+        'Blocks/location-page.php',
     );
 
     foreach ($blocks as $block) {

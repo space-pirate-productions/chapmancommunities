@@ -45,5 +45,7 @@ body.post-index {
   .entry-excerpt-link {
     display: block;
     text-align: center;
+    font-weight: 700;
+    @include font-size(16px);
   }
 }

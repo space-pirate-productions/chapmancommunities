@@ -9,9 +9,17 @@ function cc_home_signup()
 {
     Block::make(__('Newsletter Sign Up'))
         ->add_fields(array(
-            Field::make('text', 'signup_heading', __('Heading')),
-            Field::make('text', 'signup_text', __('Text')),
+            Field::make('text', 'signup_heading', __('Heading'))
+                ->set_width(50)
+                ->set_classes('heading'),
+            Field::make('text', 'signup_text', __('Text'))
+                ->set_width(50)
+                ->set_classes('text'),
+            Field::make('text', 'signup_shortcode', __('Form Shortcode'))
+                ->set_width(50)
+                ->set_classes('shortcode'),
             Field::make('image', 'signup_background', __('Background Image'))
+                ->set_width(50),
         ))
         ->set_description(__('Renders a CTA with a background image and sign up form'))
         ->set_category('custom-category', __('Home Page'), 'home')
@@ -20,6 +28,7 @@ function cc_home_signup()
         ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
             $heading = sanitize_text_field($fields['signup_heading']);
             $text = sanitize_text_field($fields['signup_text']);
+            $shortcode = \apply_filters('the_content', $fields['signup_shortcode']);
             $image = wp_get_attachment_image($fields['signup_background'], 'homepage-signup-background', false);
             $imageSrc = (!empty($fields['signup_background'])) ? wp_get_attachment_image_url($fields['signup_background'], 'homepage-signup-background', false) : '';
 ?>
@@ -32,6 +41,9 @@ function cc_home_signup()
                     <?php endif; ?>
                     <?php if ($text) : ?>
                         <p class="cc-home-signup__text cc-copy--large cc-copy--white"><?php echo $text; ?></p>
+                    <?php endif; ?>
+                    <?php if ($shortcode) : ?>
+                        <div class="cc-home-signup__form"><?php echo $shortcode; ?></div>
                     <?php endif; ?>
                 </div>
             </div>
