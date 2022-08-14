@@ -23,6 +23,9 @@ function cc_load_fields()
         'Blocks/learn-image-text-two.php',
         'Blocks/learn-education.php',
         'Blocks/learning-supports.php',
+        'Blocks/partnership-header.php',
+        'Blocks/partnership-process.php',
+        'Blocks/partnership-image-text.php',
     );
 
     foreach ($blocks as $block) {

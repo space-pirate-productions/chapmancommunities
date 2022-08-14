@@ -16,4 +16,5 @@ function cc_add_image_sizes()
     add_image_size('learn-image-text', 768, 713, true);
     add_image_size('learn-small-image', 388, 360, true);
     add_image_size('testimonial-image', 1800, 600, true);
+    add_image_size('partnership-header', 1800, 787, true);
 }

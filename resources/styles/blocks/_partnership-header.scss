@@ -1,0 +1,115 @@
+.cc-partner-header {
+  &__background {
+    @media (min-width: 992px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: stretch;
+      align-items: stretch;
+    }
+
+    &:after {
+      @media (min-width: 992px) {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+          to right,
+          rgba(51, 62, 72, 0) 0%,
+          $color_limed_spruce 100%
+        );
+        opacity: 0.86;
+      }
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__container {
+    max-width: 1800px;
+    width: 100%;
+    position: relative;
+  }
+
+  &__content {
+    width: 100%;
+    box-shadow: 0 3px 13px rgba(0, 0, 0, 0.41);
+    background-color: $color_white;
+    padding: max(min(calc((40 / 1800) * 100vw), 40px), 20px)
+      max(min(calc((67 / 1800) * 100vw), 67px), 20px);
+
+    @media (max-width: 991px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media (min-width: 992px) {
+      max-width: 730px;
+    }
+  }
+
+  &__content-wrap {
+  }
+
+  &__heading {
+    margin-bottom: calc((20 / 50) * 1em);
+
+    @media (max-width: 991px) {
+      text-align: center;
+    }
+  }
+
+  &__option {
+    &:not(:last-child) {
+      margin-bottom: max(min(calc((40 / 1800) * 100vw), 40px), 20px);
+    }
+
+    p:first-of-type {
+      display: inline;
+    }
+  }
+
+  &__options {
+    padding-left: calc((40 / 596) * 100%);
+    padding-right: calc((40 / 596) * 100%);
+  }
+
+  &__overlay {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+
+    @media (min-width: 992px) {
+      padding-right: calc((155 / 1800) * 100%);
+      justify-content: flex-end;
+      padding-top: max(min(calc((66 / 1800) * 100vw), 66px), 20px);
+      padding-bottom: max(min(calc((66 / 1800) * 100vw), 66px), 20px);
+    }
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+}
+.cc-partner-option {
+  &__name {
+    line-height: normal;
+  }
+
+  &__divider {
+    padding-left: 1ch;
+    padding-right: 1ch;
+  }
+}
