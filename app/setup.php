@@ -14,7 +14,11 @@ use function Roots\bundle;
  * @return void
  */
 add_action('wp_enqueue_scripts', function () {
-    bundle('app')->enqueue();
+    bundle('app')->enqueue()->localize('paths', [
+        'marker' => @\asset('images/marker-icon.png')->uri(),
+        'marker2x' => @\asset('images/marker-icon-2x.png')->uri(),
+        'shadow' => @\asset('images/marker-shadow.png')->uri(),
+    ]);
 }, 100);
 
 /**
