@@ -1,6 +1,11 @@
 .cc-testimonials {
   padding: max(min(calc((50 / 1800) * 100vw), 50px), 10px) 0;
 
+  &:last-child {
+    padding-bottom: 0;
+    margin-bottom: min(max(calc((88 / 1800) * -100vw), -88px), -20px);
+  }
+
   &__container {
     max-width: 1800px;
     margin: 0 auto;
