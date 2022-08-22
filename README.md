@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://spacepirateproducitons.com">
-    <img alt="Sage" src="https://cdn.roots.io/app/uploads/logo-sage.svg" height="100">
+  <a href="https://chapmancommunities.com">
+    <img alt="Chapman Communities Icon" src="https://raw.githubusercontent.com/space-pirate-productions/chapmancommunities/main/screenshot.png" height="200" width="200">
   </a>
 </p>
 
