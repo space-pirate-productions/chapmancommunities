@@ -35,7 +35,7 @@ class FooterAddress extends Widget
 
     function front_end($args, $instance)
     {
-        $image = wp_get_attachment_image($instance['fci_image'], 'full');
+        $image = wp_get_attachment_image($instance['fci_image'], 'footer-logo');
         $imageLink = $instance['fci_image_link'];
         $addressLines   = $instance['fci_address'];
         $contactMethods = $instance['fci_contact'];
