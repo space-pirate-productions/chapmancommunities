@@ -5,9 +5,24 @@
     "color": {
       "palette": [
         {
-          "slug": "primary",
-          "color": "#525ddc",
-          "name": "Primary"
+          "slug": "jagger",
+          "color": "#4a0d66",
+          "name": "Jagger"
+        },
+        {
+          "slug": "california",
+          "color": "#ff9900",
+          "name": "California"
+        },
+        {
+          "slug": "limed_spruce",
+          "color": "#333e48",
+          "name": "Limed Spruce"
+        },
+        {
+          "slug": "mine_shaft",
+          "color": "#323232",
+          "name": "Mine Shaft"
         }
       ],
       "custom": false,
@@ -24,10 +39,41 @@
     },
     "spacing": {
       "padding": true,
-      "units": ["px", "%", "em", "rem", "vw", "vh"]
+      "units": [
+        "px",
+        "%",
+        "em",
+        "rem",
+        "vw",
+        "vh"
+      ]
     },
     "typography": {
       "customFontSize": false
+    },
+    "blocks": {
+      "core/paragraph": {
+        "typography": {
+          "fontSizes": [
+            {
+              "slug": "normal",
+              "size": "1rem",
+              "name": "Normal"
+            },
+            {
+              "slug": "large",
+              "size": "1.125rem",
+              "name": "Large"
+            },
+            {
+              "slug": "bold",
+              "size": "1.5625rem",
+              "name": "Bold"
+            }
+          ],
+          "lineHeight": true
+        }
+      }
     }
   }
 }

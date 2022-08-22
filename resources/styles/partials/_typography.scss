@@ -1,15 +1,17 @@
 body {
-  font-family: $body_font;
   @include font-size(16px);
-  font-weight: 500;
-  letter-spacing: calc((0.89 / 16) * 1em);
-  line-height: calc((24 / 16) * 1em);
+
   color: $color_mine_shaft;
+  font-family: $body_font;
+  font-weight: 500;
+  line-height: calc((24 / 16) * 1em);
+  letter-spacing: calc((0.89 / 16) * 1em);
 }
 
 .cc-copy {
   &--large {
     @include font-size(18px);
+
     letter-spacing: calc((1 / 18) * 1em);
   }
 
@@ -19,6 +21,7 @@ body {
 
   &--bold {
     @include font-size(25px);
+
     font-weight: 700;
     line-height: normal;
   }
@@ -28,16 +31,26 @@ body {
   }
 }
 
+.has-large-font-size {
+  line-height: calc((36 / 18) * 1em);
+  letter-spacing: calc((1 / 18) * 1em);
+}
+
+.has-bold-font-size {
+  font-weight: 700;
+  line-height: normal;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: $heading_font;
-  letter-spacing: calc((3.61 / 65) * 1em);
   color: $color_limed_spruce;
+  font-family: $heading_font;
   line-height: normal;
+  letter-spacing: calc((3.61 / 65) * 1em);
 }
 
 h1,
@@ -71,10 +84,10 @@ h6,
 }
 
 .cc-heading {
-  font-family: $heading_font;
-  letter-spacing: calc((3.61 / 65) * 1em);
   color: $color_limed_spruce;
+  font-family: $heading_font;
   line-height: normal;
+  letter-spacing: calc((3.61 / 65) * 1em);
 
   &--one {
     @include font-size(65px);
@@ -116,16 +129,17 @@ a {
 button,
 .cc-button {
   @include font-size(18px);
-  font-weight: 700;
+
+  padding: calc((12 / 18) * 1em) calc((35 / 18) * 1em);
   color: $color_white;
+  font-weight: 700;
   line-height: normal;
   letter-spacing: normal;
   text-transform: uppercase;
-  padding: calc((12 / 18) * 1em) calc((35 / 18) * 1em);
   background-color: $color_jagger;
+  border: none;
   border-radius: 2px;
   transition: all 200ms ease-in-out;
-  border: none;
 
   &:hover,
   &:active,
