@@ -5,6 +5,21 @@
 </p>
 
 <p align="center">
+<img href="https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" />
+<img href="https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white" alt="jQuery" />
+<img href="https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel" />
+<img href="https://img.shields.io/badge/NPM-v8.11.0-gray?style=for-the-badge&logo=npm&logoColor=white&labelColor=%23000000" alt="NPM" />
+<img href="https://img.shields.io/badge/node.js-v16.15.1-gray?style=for-the-badge&logo=node.js&logoColor=white&labelColor=6DA55F" alt="NodeJS" />
+<img href="https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white" alt="Yarn" />
+<img href="https://img.shields.io/badge/bootstrap-v5.2.0-gray?style=for-the-badge&logo=bootstrap&logoColor=white&labelColor=%23563D7C" alt="Bootstrap" />
+<img href="https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white" alt="SASS" />
+<img href="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+<img href="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript" />
+<img href="https://img.shields.io/badge/php-v7.4-gray?style=for-the-badge&logo=php&logoColor=white&labelColor=%23777BB4" alt="PHP" />
+<img href="https://img.shields.io/badge/WordPress-v6.0-gray?style=for-the-badge&logo=WordPress&logoColor=white&labelColor=%23117AC9" alt="WordPress" />
+</p>
+
+<p align="center" markdown="1">
 ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
 ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
 ![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white)
