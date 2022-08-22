@@ -1,25 +1,22 @@
 <p align="center">
-  <a href="https://roots.io/sage/">
+  <a href="https://spacepirateproducitons.com">
     <img alt="Sage" src="https://cdn.roots.io/app/uploads/logo-sage.svg" height="100">
   </a>
 </p>
 
 <p align="center">
-  <a href="LICENSE.md">
-    <img alt="MIT License" src="https://img.shields.io/github/license/roots/sage?color=%23525ddc&style=flat-square" />
-  </a>
-
-  <a href="https://packagist.org/packages/roots/sage">
-    <img alt="Packagist" src="https://img.shields.io/packagist/v/roots/sage.svg?style=flat-square" />
-  </a>
-
-  <a href="https://github.com/roots/sage/actions">
-    <img alt="Build Status" src="https://img.shields.io/github/workflow/status/roots/sage/Main?style=flat-square" />
-  </a>
-
-  <a href="https://twitter.com/rootswp">
-    <img alt="Follow Roots" src="https://img.shields.io/twitter/follow/rootswp.svg?style=flat-square&color=1da1f2" />
-  </a>
+![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
+![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white)
+![NPM](https://img.shields.io/badge/NPM-v8.11.0-gray?style=for-the-badge&logo=npm&logoColor=white&labelColor=%23000000)
+![NodeJS](https://img.shields.io/badge/node.js-v16.15.1-gray?style=for-the-badge&logo=node.js&logoColor=white&labelColor=6DA55F)
+![Yarn](https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/bootstrap-v5.2.0-gray?style=for-the-badge&logo=bootstrap&logoColor=white&labelColor=%23563D7C)
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![PHP](https://img.shields.io/badge/php-v7.4-gray?style=for-the-badge&logo=php&logoColor=white&labelColor=%23777BB4)
+![WordPress](https://img.shields.io/badge/WordPress-v6.0-gray?style=for-the-badge&logo=WordPress&logoColor=white&labelColor=%23117AC9)
 </p>
 
 <p align="center">
