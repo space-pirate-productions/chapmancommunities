@@ -3,7 +3,7 @@
   <div class="entry-wrap">
     <div class="entry-image">
       <a href="{{ get_permalink() }}">
-      {!! get_the_post_thumbnail( $post_id, 'blog-index' ) !!}
+      {!! get_the_post_thumbnail( $post->ID, 'blog-index' ) !!}
       </a>
     </div>
 
