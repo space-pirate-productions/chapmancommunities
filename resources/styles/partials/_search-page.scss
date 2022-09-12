@@ -1,0 +1,11 @@
+body.search-results {
+  #main {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @media (max-width:767px) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
+}

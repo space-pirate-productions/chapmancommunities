@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   display: flex;
-  height: 75vh;
+  min-height: 75vh;
 
   &__title {
     @include font-size(250px);
