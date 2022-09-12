@@ -32,7 +32,7 @@ function cc_home_video_text()
             $heading = sanitize_text_field($fields['heading']);
             $text = apply_filters('the_content', $fields['text']);
 ?>
-        <section class="cc-home-section cc-video-text">
+        <section id="cc-video-text" class="cc-home-section cc-video-text">
             <div class="outer-stretch">
                 <div class="inner-stretch inner-stretch--video-text">
                     <div class="cc-video-text__container">

@@ -39,7 +39,7 @@ function add_homepage_image_cta()
             $sectionText = sanitize_text_field($fields['section_text']);
             $imageCtas = $fields['homepage_image_cta'];
 ?>
-        <section class="cc-home-section cc-home-image-cta">
+        <section id="cc-home-image-cta" class="cc-home-section cc-home-image-cta">
             <div class="outer-stretch">
                 <div class="inner-stretch--home-image-cta">
                     <div class="cc-home-image-cta__container">

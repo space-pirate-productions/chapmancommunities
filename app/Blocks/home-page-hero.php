@@ -30,7 +30,7 @@ function cc_home_page_hero()
             $buttonText = $fields['hero_button_text'];
             $buttonUrl = $fields['hero_button_url'];
 ?>
-        <div class="cc-home-hero">
+        <div id="cc-home-hero" class="cc-home-hero">
             <div class="outer-stretch">
                 <div class="inner-stretch inner-stretch--home-hero">
                     <div class="cc-home-hero__container">
