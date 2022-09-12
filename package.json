@@ -1,5 +1,6 @@
 {
   "name": "sage",
+  "version": "0.0.1",
   "private": true,
   "browserslist": [
     "extends @roots/browserslist-config/current"
@@ -98,6 +99,5 @@
         }
       ]
     ]
-  },
-  "version": "1.0.0"
+  }
 }
