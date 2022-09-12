@@ -1,3 +1,10 @@
+## [0.0.2](https://github.com/space-pirate-productions/chapmancommunities/compare/0.0.1...0.0.2) (2022-09-12)
+
+
+### Bug Fixes
+
+* blog hero ([7639912](https://github.com/space-pirate-productions/chapmancommunities/commit/763991255399e193df78356cb4490a2647751c1a))
+
 # 0.0.1 (2022-09-12)
 
 
