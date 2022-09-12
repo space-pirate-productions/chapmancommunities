@@ -17,7 +17,14 @@ $color_white: #fff;
 //* === START FONT VARIABLES === *//
 $heading_font: "Bebas Neue", sans-serif;
 $body_font: "Proxima Nova", "Nunito Sans", sans-serif;
+$body_font_size: 16px;
 //! === END FONT VARIABLES === !//
+
+//* === START BUTTON VARIABLES === *//
+$button_font_size: 18px;
+$button_vertical_padding: calc((12 / 18) * 1em);
+$button_horizontal_padding: calc((35 / 18) * 1em);
+//! === END BUTTON VARIABLES === !//
 
 $body_background_color: $color_white;
 $footer_background_color: $color_limed_spruce;
