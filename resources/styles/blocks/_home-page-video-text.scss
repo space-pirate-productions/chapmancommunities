@@ -85,11 +85,10 @@
   }
 
   &__text-block {
-    align-items: center;
+    align-items: flex-start;
     flex: 1 1 calc((661 / 1429) * 100%);
     justify-content: flex-end;
     display: flex;
-    padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 15px;
 
@@ -99,6 +98,8 @@
 
     @media (max-width: 767px) {
       flex-basis: 100%;
+      padding-top: 15px;
+      padding-left: 0;
     }
   }
 
