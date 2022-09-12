@@ -1,0 +1,28 @@
+.chapman-404-message {
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  height: 75vh;
+
+  &__title {
+    @include font-size(250px);
+  }
+
+  &__sub-title {
+    @include font-size(50px);
+  }
+
+  .text-red-50 {
+    @include font-size($body_font_size);
+  }
+
+  form[role="search"] {
+    margin-top: 15px;
+    
+    input {
+      @include font-size($body_font_size);
+      padding: $button_vertical_padding $button_horizontal_padding;
+    }
+  }
+}
