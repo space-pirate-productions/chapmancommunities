@@ -32,7 +32,7 @@ function cc_home_signup()
             $image = wp_get_attachment_image($fields['signup_background'], 'homepage-signup-background', false);
             $imageSrc = (!empty($fields['signup_background'])) ? wp_get_attachment_image_url($fields['signup_background'], 'homepage-signup-background', false) : '';
 ?>
-        <section class="cc-home-section cc-home-signup"></section>
+        <section id="cc-home-signup" class="cc-home-section cc-home-signup"></section>
         <div class="outer-stretch inner-stretch--home-signup">
             <div class="cc-home-signup__container" style="background-image: url(<?php echo $imageSrc; ?>);">
                 <div class="cc-home-signup__content">

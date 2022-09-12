@@ -30,36 +30,36 @@ function add_homepage_icon_cta()
         ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
             $iconCtas = $fields['homepage_icon_cta'];
             if (!empty($iconCtas)) : ?>
-            <section class="cc-home-icon-cta">
-                <div id="main-slider" class="outer-stretch cc-slider cc-slider--mobile splide" aria-label="icon cta">
-                    <div class="inner-stretch inner-stretch--icon-cta splide__track">
-                        <div class="cc-home-icon-cta__container splide__list">
-                            <?php foreach ($iconCtas as $key => $iconCta) :
+<section id="cc-home-icon-cta" class="cc-home-icon-cta">
+  <div id="main-slider" class="outer-stretch cc-slider cc-slider--mobile splide" aria-label="icon cta">
+    <div class="inner-stretch inner-stretch--icon-cta splide__track">
+      <div class="cc-home-icon-cta__container splide__list">
+        <?php foreach ($iconCtas as $key => $iconCta) :
                                 $icon = $iconCta['cta_icon'];
                                 $heading = sanitize_text_field($iconCta['cta_heading']);
                                 $text = apply_filters('the_content', $iconCta['cta_text']);
                             ?>
-                                <div class="cc-home-icon-cta__cta splide__slide">
-                                    <?php if ($icon) : ?>
-                                        <div class="cc-home-icon-cta__icon splide__slide__container">
-                                            <?php echo $icon; ?>
-                                        </div><!-- /.cc-home-icon-cta__icon -->
-                                    <?php endif; ?>
+        <div class="cc-home-icon-cta__cta splide__slide">
+          <?php if ($icon) : ?>
+          <div class="cc-home-icon-cta__icon splide__slide__container">
+            <?php echo $icon; ?>
+          </div><!-- /.cc-home-icon-cta__icon -->
+          <?php endif; ?>
 
-                                    <?php if ($heading) : ?>
-                                        <h2 class="cc-home-icon-cta__heading"><?php echo __($heading); ?></h2><!-- /.cc-home-icon-cta__heading -->
-                                    <?php endif; ?>
+          <?php if ($heading) : ?>
+          <h2 class="cc-home-icon-cta__heading"><?php echo __($heading); ?></h2><!-- /.cc-home-icon-cta__heading -->
+          <?php endif; ?>
 
-                                    <?php if ($text) : ?>
-                                        <div class="cc-home-icon-cta__text cc-copy--large cc-copy--spaced"><?php echo __($text); ?></div><!-- /.cc-home-icon-cta__text -->
-                                    <?php endif; ?>
+          <?php if ($text) : ?>
+          <div class="cc-home-icon-cta__text cc-copy--large cc-copy--spaced"><?php echo __($text); ?></div><!-- /.cc-home-icon-cta__text -->
+          <?php endif; ?>
 
-                                </div><!-- /.cc-home-icon-cta__cta -->
-                            <?php endforeach; ?>
-                        </div><!-- /.cc-home-icon-cta__container -->
-                    </div><!-- /.inner-stretch inner-stretch--icon-cta -->
-                </div><!-- /.outer-stretch -->
-            </section><!-- /.cc-home-icon-cta -->
+        </div><!-- /.cc-home-icon-cta__cta -->
+        <?php endforeach; ?>
+      </div><!-- /.cc-home-icon-cta__container -->
+    </div><!-- /.inner-stretch inner-stretch--icon-cta -->
+  </div><!-- /.outer-stretch -->
+</section><!-- /.cc-home-icon-cta -->
 <?php endif;
         });
 }
