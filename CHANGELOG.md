@@ -1,3 +1,10 @@
+## [0.0.4](https://github.com/space-pirate-productions/chapmancommunities/compare/0.0.3...0.0.4) (2022-09-15)
+
+
+### Bug Fixes
+
+*  fix team member alignment ([#26](https://github.com/space-pirate-productions/chapmancommunities/issues/26)) ([e2489e2](https://github.com/space-pirate-productions/chapmancommunities/commit/e2489e25e7b8f16030667a233e8f6f2f0baf9426)), closes [#24](https://github.com/space-pirate-productions/chapmancommunities/issues/24)
+
 ## [0.0.3](https://github.com/space-pirate-productions/chapmancommunities/compare/0.0.2...0.0.3) (2022-09-12)
 
 
