@@ -70,6 +70,10 @@
       top: 100%;
       bottom: auto;
     }
+
+    .splide__progress__bar {
+      background: $color_jagger;
+    }
   }
 
   &__list.splide__list {

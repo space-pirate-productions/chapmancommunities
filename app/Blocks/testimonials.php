@@ -83,6 +83,9 @@ function cc_testimonial_block()
                                 <?php endforeach; ?>
                             </div>
                         </div>
+                        <div class="splide__progress">
+                            <div class="splide__progress__bar"></div>
+                        </div>
                     </div>
                 </div>
             </div>
