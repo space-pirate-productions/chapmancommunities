@@ -1,3 +1,10 @@
+## [0.0.5](https://github.com/space-pirate-productions/chapmancommunities/compare/0.0.4...0.0.5) (2022-09-20)
+
+
+### Bug Fixes
+
+* testimonials autoplay ([86b711d](https://github.com/space-pirate-productions/chapmancommunities/commit/86b711d06cbaeb128fc1e57751d8f70e4691cfaa)), closes [#27](https://github.com/space-pirate-productions/chapmancommunities/issues/27)
+
 ## [0.0.4](https://github.com/space-pirate-productions/chapmancommunities/compare/0.0.3...0.0.4) (2022-09-15)
 
 
