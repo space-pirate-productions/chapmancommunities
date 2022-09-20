@@ -18,6 +18,7 @@ const testimonialSlider = {
         drag: false,
         arrows: arrows,
         pagination: arrows,
+        autoplay: arrows,
       }).mount();
     });
   },
