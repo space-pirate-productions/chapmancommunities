@@ -7,7 +7,20 @@
 
 .cc-address-widget {
   &__logo {
-    margin-bottom: 20px;
     max-width: 396px;
+    margin-bottom: 20px;
+  }
+}
+
+.cc-social-icons {
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    display: inline-block;
+    padding: 0 5px;
   }
 }

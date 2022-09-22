@@ -42,6 +42,8 @@ function cc_load_carbon_widgets()
 {
     require_once('Widgets/footer-address.php');
     require_once('Widgets/footer-signup.php');
+    require_once('Widgets/social-icons.php');
     register_widget('App\Widgets\FooterAddress');
     register_widget('App\Widgets\FooterSignup');
+    register_widget('App\Widgets\SocialIcons');
 }
