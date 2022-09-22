@@ -1,13 +1,14 @@
-import {domReady} from '@roots/sage/client';
+import { domReady } from '@roots/sage/client';
 import 'bootstrap';
 import lozad from 'lozad';
 // import multiLevelDropdown from './components/multi-level-dropdown';
 import homeIconCtaSlider from './components/home-icon-cta-slider';
-import teamsSlider from './components/team-directory-slider';
-import videoModal from './components/video-modal';
 import iconCtaSlider from './components/icon-cta-slider';
-import testimonialSlider from './components/testimonial-slider';
 import locationMap from './components/location-page-map';
+import stickyNav from './components/sticky-nav';
+import teamsSlider from './components/team-directory-slider';
+import testimonialSlider from './components/testimonial-slider';
+import videoModal from './components/video-modal';
 
 
 /**
@@ -42,6 +43,8 @@ const main = async (err) => {
   testimonialSlider.init();
 
   locationMap.init();
+
+  stickyNav.init();
 };
 
 /**
