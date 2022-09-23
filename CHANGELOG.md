@@ -1,3 +1,10 @@
+## [0.0.6](https://github.com/space-pirate-productions/chapmancommunities/compare/0.0.5...0.0.6) (2022-09-23)
+
+
+### Bug Fixes
+
+* add social icon widget ([#32](https://github.com/space-pirate-productions/chapmancommunities/issues/32)) ([8a4f43b](https://github.com/space-pirate-productions/chapmancommunities/commit/8a4f43b5101d1a09a14ef5210a772dcbfaf9cb47)), closes [#28](https://github.com/space-pirate-productions/chapmancommunities/issues/28)
+
 ## [0.0.5](https://github.com/space-pirate-productions/chapmancommunities/compare/0.0.4...0.0.5) (2022-09-20)
 
 
