@@ -1,3 +1,10 @@
+## [0.0.7](https://github.com/space-pirate-productions/chapmancommunities/compare/0.0.6...0.0.7) (2022-09-23)
+
+
+### Bug Fixes
+
+* sticky nav ([#33](https://github.com/space-pirate-productions/chapmancommunities/issues/33)) ([044d24d](https://github.com/space-pirate-productions/chapmancommunities/commit/044d24d032a193551173369532d8e89f9483608d)), closes [#30](https://github.com/space-pirate-productions/chapmancommunities/issues/30)
+
 ## [0.0.6](https://github.com/space-pirate-productions/chapmancommunities/compare/0.0.5...0.0.6) (2022-09-23)
 
 
