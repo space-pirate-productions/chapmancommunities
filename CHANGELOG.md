@@ -1,3 +1,12 @@
+## [0.0.10](https://github.com/space-pirate-productions/chapmancommunities/compare/0.0.9...0.0.10) (2022-10-03)
+
+
+### Bug Fixes
+
+* category index formatting ([a416834](https://github.com/space-pirate-productions/chapmancommunities/commit/a416834ebc689f0d92d23e1682369f86cea9e025))
+* get correct post id/thumbnail ([19139a0](https://github.com/space-pirate-productions/chapmancommunities/commit/19139a0fd65ec8f05a86d9df5488f6b05bac237d))
+* gutenberg block button background ([5f0f949](https://github.com/space-pirate-productions/chapmancommunities/commit/5f0f949a3eaad1083cf510801159b29a171f7b6c))
+
 ## [0.0.9](https://github.com/space-pirate-productions/chapmancommunities/compare/0.0.8...0.0.9) (2022-10-03)
 
 
