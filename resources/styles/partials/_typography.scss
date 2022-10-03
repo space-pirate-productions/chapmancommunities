@@ -164,5 +164,11 @@ button,
 .wp-block-button {
   &__link {
     @extend .cc-button;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $color_gray_suit !important;
+    }
   }
 }
