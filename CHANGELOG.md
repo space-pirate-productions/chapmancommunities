@@ -1,3 +1,10 @@
+## [0.0.9](https://github.com/space-pirate-productions/chapmancommunities/compare/0.0.8...0.0.9) (2022-10-03)
+
+
+### Bug Fixes
+
+* social icon size ([#39](https://github.com/space-pirate-productions/chapmancommunities/issues/39)) ([fa0c86d](https://github.com/space-pirate-productions/chapmancommunities/commit/fa0c86d685280268c6e4b85e93f0fb93310bba03))
+
 ## [0.0.8](https://github.com/space-pirate-productions/chapmancommunities/compare/0.0.7...0.0.8) (2022-10-03)
 
 
