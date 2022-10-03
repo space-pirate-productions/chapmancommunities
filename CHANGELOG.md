@@ -1,3 +1,10 @@
+## [0.0.8](https://github.com/space-pirate-productions/chapmancommunities/compare/0.0.7...0.0.8) (2022-10-03)
+
+
+### Bug Fixes
+
+* duplicate team members ([#38](https://github.com/space-pirate-productions/chapmancommunities/issues/38)) ([1ab2979](https://github.com/space-pirate-productions/chapmancommunities/commit/1ab2979adbd490e317ecfc7f2b012497a0ba3beb))
+
 ## [0.0.7](https://github.com/space-pirate-productions/chapmancommunities/compare/0.0.6...0.0.7) (2022-09-23)
 
 
