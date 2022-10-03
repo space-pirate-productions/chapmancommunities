@@ -38,7 +38,8 @@ body.home main {
 }
 
 body.page,
-body.post-index {
+body.post-index,
+body.archive {
   main.main {
     padding-bottom: max(min(calc((88 / 1800) * 100vw), 88px), 20px);
   }
