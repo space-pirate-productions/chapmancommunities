@@ -10,6 +10,9 @@ const homeIconCtaSlider = {
         new Splide(elms[i], {
           mediaQuery: "min",
           type: "loop",
+          perMove: 1,
+          perPage: 1,
+          autoplay: true,
           breakpoints: {
             768: {
               destroy: "true",

@@ -21,7 +21,9 @@
 
   &--image-left {
     #{ $self }__text {
-      padding-left: 15px;
+      @media (min-width: 768px) {
+        padding-left: 15px;
+      }
     }
   }
 

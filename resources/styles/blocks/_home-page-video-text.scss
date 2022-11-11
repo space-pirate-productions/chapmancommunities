@@ -37,17 +37,7 @@
     text-decoration: none;
     cursor: pointer;
 
-    &:hover,
-    &:active,
-    &:focus {
-      &:after {
-        color: $color_jagger;
-      }
-    }
-
-    &:after {
-      @include font-size(175px);
-
+    &::after {
       position: absolute;
       top: 50%;
       right: 50%;
@@ -59,9 +49,11 @@
       transform: translateY(-50%) translateX(50%);
       transition: 200ms all ease-in-out;
       pointer-events: none;
+
+      @include font-size(175px);
     }
 
-    &:before {
+    &::before {
       @include font-size(175px);
 
       position: absolute;
@@ -76,6 +68,14 @@
       border-radius: 100%;
       transform: translateY(-50%) translateX(50%);
       pointer-events: none;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      &::after {
+        color: $color_jagger;
+      }
     }
 
     img {
@@ -106,5 +106,11 @@
   &__text-wrap {
     order: 1;
     max-width: 540px;
+
+    .cc-button:not(:last-child) {
+      @media (max-width: 767px) {
+        margin-bottom: 10px;
+      }
+    }
   }
 }

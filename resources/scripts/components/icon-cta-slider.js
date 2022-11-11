@@ -9,6 +9,9 @@ const iconCtaSlider = {
       new Splide(element, {
         mediaQuery: "min",
         type: "loop",
+        perMove: 1,
+        perPage: 1,
+        autoplay: true,
         breakpoints: {
           768: {
             destroy: "true",

@@ -46,6 +46,12 @@
     }
   }
 
+  &__nav {
+    @media (max-width: 991px) {
+      max-width: 100%;
+    }
+  }
+
   &__nav-wrap {
     @media (min-width: 992px) {
       justify-content: flex-end;
@@ -88,6 +94,7 @@
   .dropdown-menu {
     padding: 0;
     border-radius: 2px;
+
     @media (min-width: 992px) {
       box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     }
@@ -110,6 +117,10 @@
     &:active {
       color: $color_spring_wood;
       background-color: $color_jagger;
+    }
+
+    @media (max-width: 991px) {
+      white-space: unset;
     }
   }
 
@@ -157,9 +168,9 @@
       /* IE 9 */
       -webkit-transform: rotate(-90deg);
       /* rotate right */
-          -ms-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
       /* Chrome, Safari, Opera */
-              transform: rotate(-90deg);
+      transform: rotate(-90deg);
     }
   }
 

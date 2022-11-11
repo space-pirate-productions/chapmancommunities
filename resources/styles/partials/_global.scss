@@ -43,6 +43,7 @@ body.archive {
   main.main {
     padding-bottom: max(min(calc((88 / 1800) * 100vw), 88px), 20px);
   }
+
   .page-header {
     text-align: center;
 
@@ -50,5 +51,29 @@ body.archive {
       margin-top: calc((65 / 55) * 1em);
       margin-bottom: calc((35 / 55) * 1em);
     }
+  }
+}
+
+.main .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__media {
+  @media (max-width: 767px) {
+    margin-bottom: 15px;
+  }
+}
+
+.wp-block-media-text .wp-block-media-text__content {
+  @media (max-width: 767px) {
+    padding: 0;
+  }
+}
+
+.page-id-609 {
+  .cc-learn-image-text-two__image {
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  .cc-learn-image-text-two__heading {
+    text-align: center;
   }
 }
