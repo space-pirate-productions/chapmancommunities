@@ -1,3 +1,10 @@
+## [0.0.12](https://github.com/space-pirate-productions/chapmancommunities/compare/0.0.11...0.0.12) (2022-12-28)
+
+
+### Bug Fixes
+
+* edits 2022-12-26 ([fdf7baf](https://github.com/space-pirate-productions/chapmancommunities/commit/fdf7bafb88a706e1befd9fde8a57da8ee5b143a5))
+
 ## [0.0.11](https://github.com/space-pirate-productions/chapmancommunities/compare/0.0.10...0.0.11) (2022-11-11)
 
 
