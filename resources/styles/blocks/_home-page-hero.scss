@@ -13,11 +13,10 @@
   }
 
   &__overlay {
-
     display: flex;
     justify-content: center;
 
-    @media (min-width: 768px){
+    @media (min-width: 768px) {
       position: absolute;
       top: 0;
       right: 0;
@@ -26,9 +25,12 @@
       height: 100%;
       width: 100%;
       z-index: 10;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      align-items: flex-end;
     }
 
-    @media (max-width:767px){
+    @media (max-width: 767px) {
       background-color: $color_limed_spruce;
     }
 
@@ -49,19 +51,22 @@
       width: 100%;
       z-index: -1;
 
-      @media (max-width:767px){
+      @media (max-width: 767px) {
         display: none;
       }
     }
   }
 
   &__text {
-    padding-top: max(min(calc((62 / 1800) * 100vw), 62px), 10px);
     text-align: center;
-    padding-bottom: 10px;
     padding-left: 15px;
     padding-right: 15px;
     max-width: (964px + 30px);
+
+    @media (max-width: 767px) {
+      padding-top: max(min(calc((62 / 1800) * 100vw), 62px), 10px);
+      padding-bottom: 10px;
+    }
   }
 
   &__heading {

@@ -31,7 +31,7 @@
         @endif
         @if (get_theme_mod('nav_button_text') && get_theme_mod('nav_button_url'))
         <div class="cc-banner__cta">
-          <a href="{!! get_theme_mod('nav_button_url') !!}" class="btn">{{ get_theme_mod('nav_button_text') }}</a>
+          <a href="{!! get_theme_mod('nav_button_url') !!}" {!! get_theme_mod('nav_button_new_tab') ? 'target="_blank"' : '' !!} class="btn">{{ get_theme_mod('nav_button_text') }}</a>
         </div>
         @endif
       </div>
@@ -40,3 +40,4 @@
 
   </div>
 </header>
+

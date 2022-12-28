@@ -13,13 +13,15 @@ function cc_button_shortcode($atts) {
         "type" => "",
         "href" => "",
         "text" => "",
+        "target" => "",
     ), $atts);
 
+    $target = $a['target'] ? "target='_" . $a['target'] . "'" : "" ;
+
     if ($a['element'] == "anchor") {
-        return "<a class='btn cc-button' href='" . $a['href'] . "'>" . $a['text'] . "</a>";
+        return "<a class='btn cc-button' href='" . $a['href'] . "'" . $target . ">" . $a['text'] . "</a>";
     } else {
         return "<button class='btn cc-button' type='" . $a['type'] . "'>" . $a['text'] . "</button>";
     }
 }
 add_shortcode('cc-button',__NAMESPACE__ . '\\cc_button_shortcode' );
-?>
