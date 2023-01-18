@@ -1,3 +1,10 @@
+## [0.0.13](https://github.com/space-pirate-productions/chapmancommunities/compare/0.0.12...0.0.13) (2023-01-18)
+
+
+### Bug Fixes
+
+* update sticky nav script ([a541734](https://github.com/space-pirate-productions/chapmancommunities/commit/a5417345f971c3598fba5852cf307b318e90e35a))
+
 ## [0.0.12](https://github.com/space-pirate-productions/chapmancommunities/compare/0.0.11...0.0.12) (2022-12-28)
 
 
