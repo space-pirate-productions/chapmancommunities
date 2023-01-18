@@ -5,6 +5,7 @@
 @include('sections.header')
 
 <main id="main" class="main">
+  <div id="intersection-checker"></div>
   @include('sections.widehero')
   <div class="document cc-container--wide">
     @yield('content')
