@@ -30,7 +30,7 @@ function cc_load_fields()
     );
 
     foreach ($blocks as $block) {
-        require_once($block);
+        include_once($block);
     }
 
     require_once(CHAPMAN_DIR . '/vendor/autoload.php');

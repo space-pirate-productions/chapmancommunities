@@ -38,7 +38,7 @@ function add_team_directory_block()
     ->set_keywords([__('team'), __('directory'), __('template')])
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
 
-      function unique_multidim_array($array, $key, $concat)
+      function generate_unique_team_array($array, $key, $concat)
       {
         $temp_array = array();
         $i = 0;
@@ -67,7 +67,7 @@ function add_team_directory_block()
       $everyName = array_column($everyone, 'name');
       $everyNormalName = array_map('strtolower', $everyName);
       array_multisort($everyNormalName, SORT_ASC, $everyone);
-      $everyoneUnique = unique_multidim_array($everyone, 'name', 'title');
+      $everyoneUnique = generate_unique_team_array($everyone, 'name', 'title');
       // Sort locations
       $everyLocation = array_column($locations, 'location');
       $normalizedLocations = array_map('strtolower', $everyLocation);
