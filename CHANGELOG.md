@@ -1,3 +1,10 @@
+## [0.0.14](https://github.com/space-pirate-productions/chapmancommunities/compare/0.0.13...0.0.14) (2023-02-13)
+
+
+### Bug Fixes
+
+*  resolve our team page error ([de32adf](https://github.com/space-pirate-productions/chapmancommunities/commit/de32adfa1831e80754d13b381ccc24ca4e2b7430)), closes [#42](https://github.com/space-pirate-productions/chapmancommunities/issues/42)
+
 ## [0.0.13](https://github.com/space-pirate-productions/chapmancommunities/compare/0.0.12...0.0.13) (2023-01-18)
 
 
