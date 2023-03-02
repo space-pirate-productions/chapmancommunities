@@ -1,3 +1,15 @@
+# [1.0.0](https://github.com/space-pirate-productions/chapmancommunities/compare/0.0.14...1.0.0) (2023-03-02)
+
+
+### Bug Fixes
+
+* resolve team page error 2 electric boogaloo ([039a967](https://github.com/space-pirate-productions/chapmancommunities/commit/039a9675e782f2aa7dc39945eb6276d3ec7ddf6c))
+
+
+### BREAKING CHANGES
+
+* launch
+
 ## [0.0.14](https://github.com/space-pirate-productions/chapmancommunities/compare/0.0.13...0.0.14) (2023-02-13)
 
 
