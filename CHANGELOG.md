@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/space-pirate-productions/chapmancommunities/compare/1.0.0...1.0.1) (2023-05-01)
+
+
+### Bug Fixes
+
+* remove page/post hero images and reduce font size for homepage hero ([f385708](https://github.com/space-pirate-productions/chapmancommunities/commit/f385708fb07f734daa4a17bb8c645b2659008a78))
+
 # [1.0.0](https://github.com/space-pirate-productions/chapmancommunities/compare/0.0.14...1.0.0) (2023-03-02)
 
 
