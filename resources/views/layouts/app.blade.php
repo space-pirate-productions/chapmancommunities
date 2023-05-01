@@ -6,7 +6,7 @@
 
 <main id="main" class="main">
   <div id="intersection-checker"></div>
-  @include('sections.hero')
+  {{-- @include('sections.hero') --}}
   <div class="document container">
     @yield('content')
   </div>
